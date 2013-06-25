@@ -1,0 +1,55 @@
+<!-- @include header -->
+<!-- @include sidebar -->
+
+		<!-- Content -->
+		<div class="large-10 columns main-content" id="content">
+			<div class="large-10 columns">
+				
+				<!-- repeat:blogpost:4 -->
+				<article>
+					<!-- Title -->
+					<h2><a href="%URL%">%TITLE%</a></h2>
+					<!-- Meta -->
+					<div class="meta cf">
+						<a href="%URL%" class="published_on publish-date" id="blogpost_%ID%_published_on" data-barley-publish-post="%ID%">%PUBLISHED_ON%</a>
+						<a class="tag" href="#">#category2</a><a class="tag" href="#">#category1</a>
+					</div>
+					<div data-barley="blogpost_excerpt" data-barley-editor="advanced">
+						%EXCERPT%
+					</div>	
+					<div class="read-more">
+						<a href="%URL%">Read More...</a>
+					</div>
+				</article>
+				<!-- endrepeat -->
+					
+				<div class="pagination">
+					<!-- next --><a href="#" class="older"><img src="/images/right_arrow.svg"></a><!-- endnext -->
+					<!-- previous --><a href="#" class="newer inactive"><img src="/images/right_arrow.svg"></a><!-- endprevious -->
+				</div>
+
+				<!-- Footer -->
+				<footer>
+					<a class="scrollup"><img src="/images/top_arrow.svg"></a>
+				</footer>
+
+			</div>
+
+			<!-- Sub-Navigation -->
+			<div class="large-2 columns right-sidebar">
+				<div id="stickersub">
+					<nav class="sub-nav" data-barley="blog_subnav" data-barley-editor="plus">
+						<ul>
+							<li><a href="#">Newest</a></li>
+							<li><a href="#">Categories</a></li>
+							<li><a href="#">Archive</a></li>
+							<li><a href="#">Subscribe</a></li>	
+						</ul>
+					</nav>
+				</div>	
+			</div>
+			
+		</div>
+	</div>
+	
+<!-- @include footer -->

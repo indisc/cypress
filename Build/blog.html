@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+    <title>Cypress, for portfolios</title>
+
+    <link rel="stylesheet" href="/stylesheets/normalize.css" />
+    <link rel="stylesheet" href="/stylesheets/cypress_styles.css" />
+    <link href='//fonts.googleapis.com/css?family=Muli:300,400,300italic,400italic|Six+Caps' rel='stylesheet' type='text/css'>
+
+	<script src="/javascripts/custom.modernizr.js"></script>
+
+</head>
+<body>
+
+	<!-- Background Image -->
+	<div id="background" class="hide-for-small" data-barley="bg_image" data-barley-editor="image">
+		<img src="/images/bg.png">
+	</div>	
+
+	<div class="row container">
+		<!-- Mobile Header -->
+		<div class="row" id="mobile-header">
+			<a href="#menu" class="menu-trigger"><img src="/images/mobile_menu.svg"></a>
+		</div>		
+<!-- Sidebar -->
+		<div class="large-2 columns side">
+			<div id="sticker" data-barley="sidebar" data-barley-editor="advanced">
+				<img src="/images/cypress_logo.svg" class="logo" id="logo" data-barley="logo" data-barley-editor="image-logo">
+				<hr>
+				<p id="intro">Cypress, for portfolios</p> 
+				<hr>
+				<nav id="menu"> 	
+					<ul>
+						<li><a href="/">Photo Gallery</a></li>
+						<li><a href="/about/">About Me</a></li>
+						<li><a href="/blog/">Blog</a></li>
+						<li><a href="/contact/">Contact</a></li>	
+					</ul>
+				</nav>
+				<hr>
+				<p id="social-icons">
+					<a href="#"><img src="/images/social_icons/twitter.svg" class="icon"></a>
+					<a href="#"><img src="/images/social_icons/facebook.svg" class="icon"></a>
+					<a href="#"><img src="/images/social_icons/dribbble.svg" class="icon"></a>
+					<a href="#"><img src="/images/social_icons/instagram.svg" class="icon"></a>
+					<a href="#"><img src="/images/social_icons/flickr.svg" class="icon"></a>
+				</p>	
+			</div>
+		</div>
+
+		<!-- Content -->
+		<div class="large-10 columns main-content" id="content">
+			<div class="large-10 columns">
+				
+				<!-- repeat:blogpost:4 -->
+				<article>
+					<!-- Title -->
+					<h2><a href="%URL%">%TITLE%</a></h2>
+					<!-- Meta -->
+					<div class="meta cf">
+						<a href="%URL%" class="published_on publish-date" id="blogpost_%ID%_published_on" data-barley-publish-post="%ID%">%PUBLISHED_ON%</a>
+						<a class="tag" href="#">#category2</a><a class="tag" href="#">#category1</a>
+					</div>
+					<div data-barley="blogpost_excerpt" data-barley-editor="advanced">
+						%EXCERPT%
+					</div>	
+					<div class="read-more">
+						<a href="%URL%">Read More...</a>
+					</div>
+				</article>
+				<!-- endrepeat -->
+					
+				<div class="pagination">
+					<!-- next --><a href="#" class="older"><img src="/images/right_arrow.svg"></a><!-- endnext -->
+					<!-- previous --><a href="#" class="newer inactive"><img src="/images/right_arrow.svg"></a><!-- endprevious -->
+				</div>
+
+				<!-- Footer -->
+				<footer>
+					<a class="scrollup"><img src="/images/top_arrow.svg"></a>
+				</footer>
+
+			</div>
+
+			<!-- Sub-Navigation -->
+			<div class="large-2 columns right-sidebar">
+				<div id="stickersub">
+					<nav class="sub-nav" data-barley="blog_subnav" data-barley-editor="plus">
+						<ul>
+							<li><a href="#">Newest</a></li>
+							<li><a href="#">Categories</a></li>
+							<li><a href="#">Archive</a></li>
+							<li><a href="#">Subscribe</a></li>	
+						</ul>
+					</nav>
+				</div>	
+			</div>
+			
+		</div>
+	</div>
+	
+	<!-- Javascripts -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="/javascripts/jquery.sticky.js"></script>
+	<script src="/javascripts/jquery.fitvids.js"></script>
+	<script src="/javascripts/jquery.jpanelmenu.min.js"></script>
+	<script>
+	  $(document).ready(function(){
+	    $("#sticker").sticky({topSpacing:30,getWidthFrom:'.large-2'});
+	  });
+	  
+	  $('.scrollup').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+   	  });
+
+	  var jPM = $.jPanelMenu({
+		    menu: '#menu',
+		    trigger: '.menu-trigger',
+		    duration: 300
+		});
+	  jPM.on();
+	  
+	  var $clonelogo = $('#logo').clone();
+	  $("#mobile-header").append($clonelogo);
+
+	  var $cloneintro = $('#intro').clone();
+	  $("#mobile-header").append($cloneintro);
+
+	  var $cloneintro = $('#social-icons').clone();
+	  $("#jPanelMenu-menu").append($cloneintro);
+
+	</script>
+
+</body>
+</html>

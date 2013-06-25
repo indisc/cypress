@@ -1,0 +1,71 @@
+<!-- @include header -->
+<!-- @include sidebar -->
+
+		<!-- Content -->
+		<div class="large-10 columns main-content" id="content">
+			<div class="large-10 columns">
+					<!-- Title -->
+					<h2><span data-barley="contact_title" data-barley-editor="mini">Contact Me</span></h2>
+					<!-- Intro -->
+					<div data-barley="contact_intro" data-barley-editor="advanced">
+						<p>Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum.</p>
+					</div>
+					<!-- Form -->	
+					<div id="barley-form">
+				        <input type="hidden" name="to" id="to" value="youremail@yourdomain.com" />
+				        <input type="hidden" name="subject" id="to" value="Contact Form Submission" />
+				        <input type="hidden" name="response_success" id="response_success" value="Thanks! Your message was sent" />
+				        <input type="hidden" name="response_error" id="response_error" value="Sorry, please try again." />
+
+				        <div class="field cf">
+				            <label class="inline">Your Name:</label>
+				            <input type="text" id="name" placeholder="Jeffrey Lebowski" data-required="true" />
+				        </div>
+
+				        <div class="field cf">
+				            <label class="inline">Your Email:</label>
+				            <input type="text" id="email" placeholder="dude@mail.com" data-required="true" />
+				        </div>
+
+				        <div class="field cf">
+				            <label class="inline">Subject:</label>
+				            <input type="text" id="subject" placeholder="The dude abides..." data-required="true" />
+				        </div>
+
+				        <div class="field message cf">
+				            <label class="inline">Message:</label>
+				            <textarea rows="8"></textarea>
+				        </div>
+
+				        <div class="field cf">
+				            <div class="form-button-box">
+				            	<input type="button" value="Submit" id="barley-submit" class="button" />
+				            </div>
+				        </div>
+
+				        <div id="barley-form-message" style="display:none;">MESSAGE HERE</div>
+				    </div>
+				<!-- Footer -->
+				<footer>
+					<a class="scrollup"><img src="images/top_arrow.svg"></a>
+				</footer>
+			</div>
+
+			<!-- Sub-Navigation -->
+			<div class="large-2 columns right-sidebar">
+				<div id="stickersub">
+					<nav class="sub-nav" data-barley="contact_subnav" data-barley-editor="plus">
+						<ul>
+							<li><a href="#">Skype</a></li>
+							<li><a href="#">Email</a></li>
+							<li><a href="#">Quora</a></li>
+							<li><a href="#">Chat</a></li>
+						</ul>
+					</nav>
+				</div>	
+			</div>
+			
+		</div>
+	</div>
+	
+<!-- @include footer -->

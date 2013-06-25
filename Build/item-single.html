@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+    <title>Cypress, for portfolios</title>
+
+    <link rel="stylesheet" href="/stylesheets/normalize.css" />
+    <link rel="stylesheet" href="/stylesheets/cypress_styles.css" />
+    <link href='//fonts.googleapis.com/css?family=Muli:300,400,300italic,400italic|Six+Caps' rel='stylesheet' type='text/css'>
+
+	<script src="/javascripts/custom.modernizr.js"></script>
+
+</head>
+<body>
+
+	<!-- Background Image -->
+	<div id="background" class="hide-for-small" data-barley="bg_image" data-barley-editor="image">
+		<img src="/images/bg.png">
+	</div>	
+
+	<div class="row container">
+		<!-- Mobile Header -->
+		<div class="row" id="mobile-header">
+			<a href="#menu" class="menu-trigger"><img src="/images/mobile_menu.svg"></a>
+		</div>		
+<!-- Sidebar -->
+		<div class="large-2 columns side">
+			<div id="sticker" data-barley="sidebar" data-barley-editor="advanced">
+				<img src="/images/cypress_logo.svg" class="logo" id="logo" data-barley="logo" data-barley-editor="image-logo">
+				<hr>
+				<p id="intro">Cypress, for portfolios</p> 
+				<hr>
+				<nav id="menu"> 	
+					<ul>
+						<li><a href="/">Photo Gallery</a></li>
+						<li><a href="/about/">About Me</a></li>
+						<li><a href="/blog/">Blog</a></li>
+						<li><a href="/contact/">Contact</a></li>	
+					</ul>
+				</nav>
+				<hr>
+				<p id="social-icons">
+					<a href="#"><img src="/images/social_icons/twitter.svg" class="icon"></a>
+					<a href="#"><img src="/images/social_icons/facebook.svg" class="icon"></a>
+					<a href="#"><img src="/images/social_icons/dribbble.svg" class="icon"></a>
+					<a href="#"><img src="/images/social_icons/instagram.svg" class="icon"></a>
+					<a href="#"><img src="/images/social_icons/flickr.svg" class="icon"></a>
+				</p>	
+			</div>
+		</div>
+
+		<!-- Content -->
+		<div class="large-10 columns main-content">
+			<div class="large-12 columns item-detail">
+				<!-- Title -->
+				<h2><span data-barley="item_title" data-barley-editor="mini">Item Title</span><a href="#" class="back-link">Back</a></h2>
+				<div data-barley="item_details" data-barley-editor="advanced">
+					<img src="http://placehold.it/1000x600">
+					<img src="http://placehold.it/1000x600">
+					<img src="http://placehold.it/1000x600">
+					<p>Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.</p>
+					<p>Cusociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+				</div>	
+			</div>
+
+			<!-- Footer -->
+			<footer class="show-for-small">
+				<a class="scrollup"><img src="/images/top_arrow.svg"></a>
+			</footer>
+			
+		</div>
+	</div>
+	
+	<!-- Javascripts -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="/javascripts/jquery.sticky.js"></script>
+	<script src="/javascripts/jquery.fitvids.js"></script>
+	<script src="/javascripts/jquery.jpanelmenu.min.js"></script>
+	<script>
+	  $(document).ready(function(){
+	    $("#sticker").sticky({topSpacing:30,getWidthFrom:'.large-2'});
+	  });
+	  
+	  $('.scrollup').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+   	  });
+
+	  var jPM = $.jPanelMenu({
+		    menu: '#menu',
+		    trigger: '.menu-trigger',
+		    duration: 300
+		});
+	  jPM.on();
+	  
+	  var $clonelogo = $('#logo').clone();
+	  $("#mobile-header").append($clonelogo);
+
+	  var $cloneintro = $('#intro').clone();
+	  $("#mobile-header").append($cloneintro);
+
+	  var $cloneintro = $('#social-icons').clone();
+	  $("#jPanelMenu-menu").append($cloneintro);
+
+	</script>
+
+</body>
+</html>

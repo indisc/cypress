@@ -1,0 +1,35 @@
+	<!-- Javascripts -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="/javascripts/jquery.sticky.js"></script>
+	<script src="/javascripts/jquery.fitvids.js"></script>
+	<script src="/javascripts/jquery.jpanelmenu.min.js"></script>
+	<script>
+	  $(document).ready(function(){
+	    $("#sticker").sticky({topSpacing:30,getWidthFrom:'.large-2'});
+	  });
+	  
+	  $('.scrollup').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+   	  });
+
+	  var jPM = $.jPanelMenu({
+		    menu: '#menu',
+		    trigger: '.menu-trigger',
+		    duration: 300
+		});
+	  jPM.on();
+	  
+	  var $clonelogo = $('#logo').clone();
+	  $("#mobile-header").append($clonelogo);
+
+	  var $cloneintro = $('#intro').clone();
+	  $("#mobile-header").append($cloneintro);
+
+	  var $cloneintro = $('#social-icons').clone();
+	  $("#jPanelMenu-menu").append($cloneintro);
+
+	</script>
+
+</body>
+</html>
