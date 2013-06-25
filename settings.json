@@ -1,10 +1,8 @@
 {
     "name": "Cypress",
     "creator": "Plain",
-    "creator_url": "http://plainmade.com"
-    "post_types": [
-    	{
+    "creator_url": "http://plainmade.com",
+    "content_types": {
     		"item": "Gallery Piece"
     	}
-    ]
 }
