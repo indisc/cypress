@@ -1,25 +1,32 @@
 <!-- Sidebar -->
 		<div class="large-2 columns side">
-			<div id="sticker" data-barley="sidebar" data-barley-editor="advanced">
-				<img src="/images/cypress_logo.svg" class="logo" id="logo">
+			<div id="sticker">
+				<a href="/"><img src="/images/cypress_logo.svg" class="logo" id="logo" data-barley="site_logo" data-barley-editor="img-logo" /></a>
 				<hr>
-				<p id="intro">Cypress, for portfolios</p> 
+				<div data-barley="site_description" data-barley-editor="simple">
+					<p id="intro">Cypress, for portfolios</p>
+				</div>
 				<hr>
-				<nav id="menu"> 	
+				<nav id="menu">	
 					<ul>
-						<li><a href="/">Photo Gallery</a></li>
-						<li><a href="/about/">About Me</a></li>
+						<li><a href="/">Gallery</a></li>
 						<li><a href="/blog/">Blog</a></li>
-						<li><a href="/contact/">Contact</a></li>	
+						<li><a href="/about/">About Me</a></li>
+						<!-- navigation -->
+						<li><a href="%URL%">%PAGE%</a></li>
+						<!-- endnavigation -->
+						<li><a href="/contact/">Contact</a></li>
 					</ul>
 				</nav>
 				<hr>
+				<div data-barley="social_icons" data-barley-editor="advanced">
 				<p id="social-icons">
 					<a href="#"><img src="/images/social_icons/twitter.svg" class="icon"></a>
 					<a href="#"><img src="/images/social_icons/facebook.svg" class="icon"></a>
 					<a href="#"><img src="/images/social_icons/dribbble.svg" class="icon"></a>
 					<a href="#"><img src="/images/social_icons/instagram.svg" class="icon"></a>
 					<a href="#"><img src="/images/social_icons/flickr.svg" class="icon"></a>
-				</p>	
+				</p>
+				</div>	
 			</div>
 		</div>
