@@ -29,7 +29,7 @@
 <!-- Sidebar -->
 		<div class="large-2 columns side">
 			<div id="sticker">
-				<a href="/"><img src="/images/cypress_logo.svg" class="logo" id="logo" data-barley="site_logo" data-barley-editor="img-logo" /></a>
+				<a href="/"><img src="/images/cypress_logo.svg" class="logo" id="logo" data-barley="site_logo" data-barley-editor="img-logo"></a>
 				<hr>
 				<div data-barley="site_description" data-barley-editor="simple">
 					<p id="intro">Cypress, for portfolios</p>
@@ -68,7 +68,6 @@
 					<!-- Meta -->
 					<div class="meta cf">
 						<span class="published_on publish-date" data-barley="blogpost_published_on" id="blogpost_published_on">(Publish Date)</span>
-						<a class="tag" href="#">#category2</a><a class="tag" href="#">#category1</a>
 					</div>
 					<!-- Post Content -->
 					<div data-barley="blogpost_body" data-barley-editor="advanced">
@@ -113,12 +112,10 @@
 			<!-- Sub-Navigation -->
 			<div class="large-2 columns right-sidebar">
 				<div id="stickersub">
-					<nav class="sub-nav" data-barley="blog_subnav" data-barley-editor="plus">
+					<nav class="sub-nav">
 						<ul>
-							<li><a href="#">Newest</a></li>
-							<li><a href="#">Categories</a></li>
-							<li><a href="#">Archive</a></li>
-							<li><a href="#">Subscribe</a></li>	
+							<li><a href="/blog">Newest</a></li>
+							<li><a href="/blog/feed">Subscribe</a></li>	
 						</ul>
 					</nav>
 				</div>	
@@ -150,7 +147,8 @@
 		    duration: 300
 		});
 	  jPM.on();
-	  
+
+	  // Cloning for mobile browsers
 	  var $clonelogo = $('#logo').clone();
 	  $("#mobile-header").append($clonelogo);
 

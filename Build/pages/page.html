@@ -29,7 +29,7 @@
 <!-- Sidebar -->
 		<div class="large-2 columns side">
 			<div id="sticker">
-				<a href="/"><img src="/images/cypress_logo.svg" class="logo" id="logo" data-barley="site_logo" data-barley-editor="img-logo" /></a>
+				<a href="/"><img src="/images/cypress_logo.svg" class="logo" id="logo" data-barley="site_logo" data-barley-editor="img-logo"></a>
 				<hr>
 				<div data-barley="site_description" data-barley-editor="simple">
 					<p id="intro">Cypress, for portfolios</p>
@@ -120,7 +120,8 @@
 		    duration: 300
 		});
 	  jPM.on();
-	  
+
+	  // Cloning for mobile browsers
 	  var $clonelogo = $('#logo').clone();
 	  $("#mobile-header").append($clonelogo);
 
