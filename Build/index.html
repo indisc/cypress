@@ -62,6 +62,15 @@
 					<h5 class="item-title"><a href="%URL%"><span data-barley="item_title">%TITLE%</span></a></h5>
 				</div>
 			<!-- endrepeat -->
+
+			<!-- item:default_message --> 
+				<div class="large-12 columns">
+					<div class="row default-message">
+						<i class="barley-icon-cogs"></i>
+						<span class="default-text">There is currently no content to display</span> 
+					</div>	
+				</div>
+			<!-- enddefault_message -->
 			
 			<div class="cf"></div>
 			
@@ -81,6 +90,8 @@
 	<script>
 	  $(document).ready(function(){
 	    $("#sticker").sticky({topSpacing:30,getWidthFrom:'.large-2'});
+	    $("#stickersub").sticky({topSpacing:30,getWidthFrom:'.right-sidebar'});
+	    $("#content").fitVids();
 	  });
 	  
 	  $('.scrollup').click(function(){
