@@ -12,10 +12,13 @@
 					</div>
 					<!-- Form -->	
 					<div id="barley-form">
+				        
+				        <!--
 				        <input type="hidden" name="to" id="to" value="youremail@yourdomain.com" />
 				        <input type="hidden" name="subject" id="to" value="Contact Form Submission" />
 				        <input type="hidden" name="response_success" id="response_success" value="Thanks! Your message was sent" />
 				        <input type="hidden" name="response_error" id="response_error" value="Sorry, please try again." />
+						-->
 
 				        <div class="field cf">
 				            <label class="inline">Your Name:</label>
@@ -29,7 +32,7 @@
 
 				        <div class="field cf">
 				            <label class="inline">Subject:</label>
-				            <input type="text" id="subject" placeholder="The dude abides..." data-required="true" />
+				            <input type="text" name="subject" id="to" placeholder="The dude abides..." data-required="true" />
 				        </div>
 
 				        <div class="field message cf">
@@ -37,6 +40,28 @@
 				            <textarea rows="8"></textarea>
 				        </div>
 
+						<!-- barley:owner -->
+						<div class="form-settings">
+							<h4>Form Settings</h4>
+							<p>Edit the options for this form below. These options are only visible to you.</p>
+
+							<div class="field cf">
+					            <label class="inline">Email Address:</label>
+					            <input type="email" name="to" id="to" placeholder="Where you'll receive these messages" data-required="true" />
+					        </div>
+					        <div class="field cf">
+					            <label class="inline">Success Message:</label>
+					            <input type="text" name="response_success" id="response_success" value="Thanks! Your message was sent." data-required="true" />
+					        </div>
+					        <div class="field cf">
+					            <label class="inline">Error Message:</label>
+					            <input type="text" name="response_error" id="response_error" value="Sorry, please try again." data-required="true" />
+					        </div>
+
+							<div class="cf"></div>
+						</div>
+						<!-- endbarley -->
+						
 				        <div class="field cf">
 				            <div class="form-button-box">
 				            	<input type="button" value="Submit" id="barley-submit" class="button" />
@@ -44,11 +69,10 @@
 				        </div>
 
 				        <div id="barley-form-message" style="display:none;">MESSAGE HERE</div>
+
+				        
 				    </div>
-				<!-- Footer -->
-				<footer>
-					<a class="scrollup"><img src="images/top_arrow.svg"></a>
-				</footer>
+				<!-- @include footer -->
 			</div>
 
 			<!-- Sub-Navigation -->
@@ -68,4 +92,7 @@
 		</div>
 	</div>
 	
-<!-- @include footer -->
+<!-- @include scripts -->
+
+</body>
+</html>

@@ -1,38 +1,13 @@
-	<!-- Javascripts -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="/javascripts/jquery.sticky.js"></script>
-	<script src="/javascripts/jquery.fitvids.js"></script>
-	<script src="/javascripts/jquery.jpanelmenu.min.js"></script>
-	<script>
-	  $(document).ready(function(){
-	    $("#sticker").sticky({topSpacing:30,getWidthFrom:'.large-2'});
-	    $("#stickersub").sticky({topSpacing:30,getWidthFrom:'.right-sidebar'});
-	    $("#content").fitVids();
-	  });
-	  
-	  $('.scrollup').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 600);
-        return false;
-   	  });
-
-	  var jPM = $.jPanelMenu({
-		    menu: '#menu',
-		    trigger: '.menu-trigger',
-		    duration: 300
-		});
-	  jPM.on();
-
-	  // Cloning for mobile browsers
-	  var $clonelogo = $('#logo').clone();
-	  $("#mobile-header").append($clonelogo);
-
-	  var $cloneintro = $('#intro').clone();
-	  $("#mobile-header").append($cloneintro);
-
-	  var $cloneintro = $('#social-icons').clone();
-	  $("#jPanelMenu-menu").append($cloneintro);
-
-	</script>
-
-</body>
-</html>
+	<!-- Footer -->
+		<footer>
+			<a class="scrollup"><img src="/images/top_arrow.svg"></a>
+			<div class="bottom-line">
+				<div class="copyright" data-barley="copyright" data-barley-editor="simple">
+					&copy; Cypress
+				</div>
+				<div class="powered">
+					<span data-barley="barley_icon" data-barley-editor="image"><a href="#"><img src="<!-- @path barley_icon.svg -->" width="30"></a></span><span class="hide-for-small" data-barley="powered" data-barley-editor="mini">powered by</span>
+				</div>	
+				<div class="cf"></div>
+			</div>
+		</footer>

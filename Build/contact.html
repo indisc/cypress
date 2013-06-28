@@ -26,7 +26,7 @@
 		<div class="row" id="mobile-header">
 			<a href="#menu" class="menu-trigger"><img src="/images/mobile_menu.svg"></a>
 		</div>		
-<!-- Sidebar -->
+		<!-- Sidebar -->
 		<div class="large-2 columns side">
 			<div id="sticker">
 				<div data-barley="site_logo" data-barley-editor="image-logo">
@@ -72,10 +72,13 @@
 					</div>
 					<!-- Form -->	
 					<div id="barley-form">
+				        
+				        <!--
 				        <input type="hidden" name="to" id="to" value="youremail@yourdomain.com" />
 				        <input type="hidden" name="subject" id="to" value="Contact Form Submission" />
 				        <input type="hidden" name="response_success" id="response_success" value="Thanks! Your message was sent" />
 				        <input type="hidden" name="response_error" id="response_error" value="Sorry, please try again." />
+						-->
 
 				        <div class="field cf">
 				            <label class="inline">Your Name:</label>
@@ -89,7 +92,7 @@
 
 				        <div class="field cf">
 				            <label class="inline">Subject:</label>
-				            <input type="text" id="subject" placeholder="The dude abides..." data-required="true" />
+				            <input type="text" name="subject" id="to" placeholder="The dude abides..." data-required="true" />
 				        </div>
 
 				        <div class="field message cf">
@@ -97,6 +100,28 @@
 				            <textarea rows="8"></textarea>
 				        </div>
 
+						<!-- barley:owner -->
+						<div class="form-settings">
+							<h4>Form Settings</h4>
+							<p>Edit the options for this form below. These options are only visible to you.</p>
+
+							<div class="field cf">
+					            <label class="inline">Email Address:</label>
+					            <input type="email" name="to" id="to" placeholder="Where you'll receive these messages" data-required="true" />
+					        </div>
+					        <div class="field cf">
+					            <label class="inline">Success Message:</label>
+					            <input type="text" name="response_success" id="response_success" value="Thanks! Your message was sent." data-required="true" />
+					        </div>
+					        <div class="field cf">
+					            <label class="inline">Error Message:</label>
+					            <input type="text" name="response_error" id="response_error" value="Sorry, please try again." data-required="true" />
+					        </div>
+
+							<div class="cf"></div>
+						</div>
+						<!-- endbarley -->
+						
 				        <div class="field cf">
 				            <div class="form-button-box">
 				            	<input type="button" value="Submit" id="barley-submit" class="button" />
@@ -104,11 +129,22 @@
 				        </div>
 
 				        <div id="barley-form-message" style="display:none;">MESSAGE HERE</div>
+
+				        
 				    </div>
-				<!-- Footer -->
-				<footer>
-					<a class="scrollup"><img src="images/top_arrow.svg"></a>
-				</footer>
+					<!-- Footer -->
+		<footer>
+			<a class="scrollup"><img src="/images/top_arrow.svg"></a>
+			<div class="bottom-line">
+				<div class="copyright" data-barley="copyright" data-barley-editor="simple">
+					&copy; Cypress
+				</div>
+				<div class="powered">
+					<span data-barley="barley_icon" data-barley-editor="image"><a href="#"><img src="images/barley_icon.svg" width="30"></a></span><span class="hide-for-small" data-barley="powered" data-barley-editor="mini">powered by</span>
+				</div>	
+				<div class="cf"></div>
+			</div>
+		</footer>
 			</div>
 
 			<!-- Sub-Navigation -->
@@ -128,41 +164,14 @@
 		</div>
 	</div>
 	
-	<!-- Javascripts -->
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="/javascripts/jquery.sticky.js"></script>
 	<script src="/javascripts/jquery.fitvids.js"></script>
 	<script src="/javascripts/jquery.jpanelmenu.min.js"></script>
-	<script>
-	  $(document).ready(function(){
-	    $("#sticker").sticky({topSpacing:30,getWidthFrom:'.large-2'});
-	    $("#stickersub").sticky({topSpacing:30,getWidthFrom:'.right-sidebar'});
-	    $("#content").fitVids();
-	  });
-	  
-	  $('.scrollup').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 600);
-        return false;
-   	  });
+	<script src="/javascripts/cypress.js"></script>
 
-	  var jPM = $.jPanelMenu({
-		    menu: '#menu',
-		    trigger: '.menu-trigger',
-		    duration: 300
-		});
-	  jPM.on();
 
-	  // Cloning for mobile browsers
-	  var $clonelogo = $('#logo').clone();
-	  $("#mobile-header").append($clonelogo);
-
-	  var $cloneintro = $('#intro').clone();
-	  $("#mobile-header").append($cloneintro);
-
-	  var $cloneintro = $('#social-icons').clone();
-	  $("#jPanelMenu-menu").append($cloneintro);
-
-	</script>
 
 </body>
 </html>

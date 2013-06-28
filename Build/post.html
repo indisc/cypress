@@ -26,7 +26,7 @@
 		<div class="row" id="mobile-header">
 			<a href="#menu" class="menu-trigger"><img src="/images/mobile_menu.svg"></a>
 		</div>		
-<!-- Sidebar -->
+		<!-- Sidebar -->
 		<div class="large-2 columns side">
 			<div id="sticker">
 				<div data-barley="site_logo" data-barley-editor="image-logo">
@@ -105,10 +105,19 @@
 						<img src="http://placehold.it/200x200&text=left" class="left"><p>Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.Cusociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
 					</div>	
 				</article>	
-				<!-- Footer -->
-				<footer>
-					<a class="scrollup"><img src="/images/top_arrow.svg"></a>
-				</footer>
+					<!-- Footer -->
+		<footer>
+			<a class="scrollup"><img src="/images/top_arrow.svg"></a>
+			<div class="bottom-line">
+				<div class="copyright" data-barley="copyright" data-barley-editor="simple">
+					&copy; Cypress
+				</div>
+				<div class="powered">
+					<span data-barley="barley_icon" data-barley-editor="image"><a href="#"><img src="images/barley_icon.svg" width="30"></a></span><span class="hide-for-small" data-barley="powered" data-barley-editor="mini">powered by</span>
+				</div>	
+				<div class="cf"></div>
+			</div>
+		</footer>
 			</div>
 
 			<!-- Sub-Navigation -->
@@ -126,40 +135,17 @@
 		</div>
 	</div>
 	
-	<!-- Javascripts -->
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="/javascripts/jquery.sticky.js"></script>
 	<script src="/javascripts/jquery.fitvids.js"></script>
 	<script src="/javascripts/jquery.jpanelmenu.min.js"></script>
+	<script src="/javascripts/cypress.js"></script>
+
+
+
 	<script>
-	  $(document).ready(function(){
-	    $("#sticker").sticky({topSpacing:30,getWidthFrom:'.large-2'});
-	    $("#stickersub").sticky({topSpacing:30,getWidthFrom:'.right-sidebar'});
-	    $("#content").fitVids();
-	  });
-	  
-	  $('.scrollup').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 600);
-        return false;
-   	  });
-
-	  var jPM = $.jPanelMenu({
-		    menu: '#menu',
-		    trigger: '.menu-trigger',
-		    duration: 300
-		});
-	  jPM.on();
-
-	  // Cloning for mobile browsers
-	  var $clonelogo = $('#logo').clone();
-	  $("#mobile-header").append($clonelogo);
-
-	  var $cloneintro = $('#intro').clone();
-	  $("#mobile-header").append($cloneintro);
-
-	  var $cloneintro = $('#social-icons').clone();
-	  $("#jPanelMenu-menu").append($cloneintro);
-
+		if($('article').length == 0){ $('.scrollup').css('visibility','hidden'); }
 	</script>
 
 </body>

@@ -26,7 +26,7 @@
 		<div class="row" id="mobile-header">
 			<a href="#menu" class="menu-trigger"><img src="/images/mobile_menu.svg"></a>
 		</div>		
-<!-- Sidebar -->
+		<!-- Sidebar -->
 		<div class="large-2 columns side">
 			<div id="sticker">
 				<div data-barley="site_logo" data-barley-editor="image-logo">
@@ -86,56 +86,32 @@
 				</div>
 				<!-- endbarley -->
 
-				<!--
-				<div style="display:none;" data-barley="item_thumb" data-barley-editor="image">
-					<img src="http://placehold.it/400x400">
-				</div>
-				-->
 			</div>
 
-			<!-- Footer -->
-			<footer class="show-for-small">
-				<a class="scrollup"><img src="/images/top_arrow.svg"></a>
-			</footer>
-			
+				<!-- Footer -->
+		<footer>
+			<a class="scrollup"><img src="/images/top_arrow.svg"></a>
+			<div class="bottom-line">
+				<div class="copyright" data-barley="copyright" data-barley-editor="simple">
+					&copy; Cypress
+				</div>
+				<div class="powered">
+					<span data-barley="barley_icon" data-barley-editor="image"><a href="#"><img src="images/barley_icon.svg" width="30"></a></span><span class="hide-for-small" data-barley="powered" data-barley-editor="mini">powered by</span>
+				</div>	
+				<div class="cf"></div>
+			</div>
+		</footer>
 		</div>
 	</div>
 	
-	<!-- Javascripts -->
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="/javascripts/jquery.sticky.js"></script>
 	<script src="/javascripts/jquery.fitvids.js"></script>
 	<script src="/javascripts/jquery.jpanelmenu.min.js"></script>
-	<script>
-	  $(document).ready(function(){
-	    $("#sticker").sticky({topSpacing:30,getWidthFrom:'.large-2'});
-	    $("#stickersub").sticky({topSpacing:30,getWidthFrom:'.right-sidebar'});
-	    $("#content").fitVids();
-	  });
-	  
-	  $('.scrollup').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 600);
-        return false;
-   	  });
+	<script src="/javascripts/cypress.js"></script>
 
-	  var jPM = $.jPanelMenu({
-		    menu: '#menu',
-		    trigger: '.menu-trigger',
-		    duration: 300
-		});
-	  jPM.on();
 
-	  // Cloning for mobile browsers
-	  var $clonelogo = $('#logo').clone();
-	  $("#mobile-header").append($clonelogo);
-
-	  var $cloneintro = $('#intro').clone();
-	  $("#mobile-header").append($cloneintro);
-
-	  var $cloneintro = $('#social-icons').clone();
-	  $("#jPanelMenu-menu").append($cloneintro);
-
-	</script>
 
 </body>
 </html>

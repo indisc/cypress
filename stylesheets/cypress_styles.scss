@@ -102,7 +102,7 @@ p {
 	left: -50%; 
 	width: 200%; 
 	height: 200%;
-	z-index: 0;
+	z-index: -1;
 	img {
 	  position: absolute; 
 	  top: 0; 
@@ -139,7 +139,7 @@ p {
 		margin: 21px 0 20px;
 		padding: 0;
 		li {
-			font-family: "Muli", sans-serif;
+			font-family: $copy, sans-serif;
 			font-weight: 400;
 			font-size: 13px;
 			margin: 10px 0;
@@ -189,7 +189,7 @@ p {
 		margin: 21px 0 20px;
 		padding: 0;
 		li {
-			font-family: "Muli", sans-serif;
+			font-family: $copy, sans-serif;
 			font-weight: 400;
 			font-size: 14px;
 			margin: 10px 0;
@@ -292,12 +292,12 @@ p {
 .container {
 	margin: 0 auto;
 	padding: 30px 15px 30px 30px;
-	background: rgba(255,255,255,0.93);
+	background: rgba(255,255,255,0.9);
 }
 .item {
 	margin-bottom: 30px;
 	.item-title {
-		font-family: "Muli", sans-serif;
+		font-family: $copy, sans-serif;
 		font-weight: 100;
 		font-size: 13px;
 		display: block;
@@ -366,6 +366,7 @@ footer {
 	padding: 30px 0;
 	margin-top: 40px;
 	text-align: center;
+	clear: both;
 	a.scrollup {
 		opacity: 0.4;
 		@include fade;
@@ -386,7 +387,7 @@ footer {
 		margin: 19px 0 19px;
 		padding: 0;
 		li {
-			font-family: "Muli", sans-serif;
+			font-family: $copy, sans-serif;
 			font-weight: 400;
 			font-size: 12px;
 			margin: 10px 0;
@@ -464,6 +465,7 @@ footer {
 		border-bottom: 1px dotted rgba(0,0,0,0.2);
 		padding-bottom: 7px;
 		padding-left: 3px;
+		font-family: $copy, sans-serif;
 	}
 	textarea {
 		box-sizing: border-box;
@@ -473,6 +475,7 @@ footer {
 		border: 1px solid rgba(0,0,0,0.12);
 		outline: none;
 		padding: 10px;
+		font-family: $copy, sans-serif;
 	}
 	label {
 		float: left;
@@ -493,14 +496,15 @@ footer {
 		padding: 6px 14px 7px;
 		text-transform: uppercase;
 		letter-spacing: 1px;
+		font-family: $copy, sans-serif;
 	}
 	.form-button-box {
 
 	}
-	::-webkit-input-placeholder {color: rgba(0,0,0,0.22); font-style: italic;}
-	:-moz-placeholder {color: rgba(0,0,0,0.22); font-style: italic;}
-	::-moz-placeholder {color: rgba(0,0,0,0.22); font-style: italic;}
-	:-ms-input-placeholder {color: rgba(0,0,0,0.22); font-style: italic;}
+	::-webkit-input-placeholder {color: rgba(0,0,0,0.3); font-style: italic;}
+	:-moz-placeholder {color: rgba(0,0,0,0.3); font-style: italic;}
+	::-moz-placeholder {color: rgba(0,0,0,0.3); font-style: italic;}
+	:-ms-input-placeholder {color: rgba(0,0,0,0.3); font-style: italic;}
 }
 #barley-form-message {
 	background: rgba(0,0,0,0.03);
@@ -518,8 +522,32 @@ footer {
 	display: none;
 }
 .default-message {
-	margin-top: 150px;
-    text-align: center;
+	text-align: center;
+	min-height: 500px;
+	&.gallery {
+		margin: 0 15px;
+		min-height: 800px;
+		background-image: url(../image/soon.svg);
+	    background-size: 100%;
+	    background-position: center top;
+	    background-repeat: no-repeat;
+	}   
+	&.mobile {
+		margin: 0 15px 20px;
+		min-height: 260px;
+		background-image: url(../image/soon_mobile.svg);
+	    background-size: 100%;
+	    background-position: center top;
+	    background-repeat: no-repeat;
+	}
+	&.blog-list {
+		margin: 0;
+		min-height: 600px;
+		background-image: url(../image/soon_blog.svg);
+	    background-size: 100%;
+	    background-position: center top;
+	    background-repeat: no-repeat;
+	}
     i {
     	font-size: 116px;
     	color: rgba(0,0,0,0.1);
@@ -535,7 +563,7 @@ footer {
 	}
 }
 .set-thumb {
-	background: rgba(0,0,0,0.02);
+	background: rgba(0,0,0,0.04);
 	padding: 30px;
 	margin: 65px 0 60px;
 	h4 {
@@ -551,11 +579,61 @@ footer {
 		color: lighten($primary,30%);
 		font-style: italic;
 	}
+	img {
+		margin: 0;
+	}
 }
 .set-thumb-target {
 	width: 230px;
 	float: right;
 	margin-left: 30px;
+}
+.form-settings {
+	background: rgba(0,0,0,0.04);
+	padding: 25px 30px;
+	margin: 45px 0 40px;
+	h4 {
+		font-size: 42px;
+		margin: 0 0 24px;
+	}
+	p {
+		font-size: 13px;
+		margin-bottom: 40px;
+	}
+	label {
+		width: 26% !important;
+	}
+	input {
+		width: 72% !important;
+		padding: 10px !important;
+		margin-top: -8px !important;
+	}
+}
+.bottom-line {
+	margin: -38px 0 40px;
+	font-size: 12px;
+	color: lighten($primary,30%);
+	line-height: 20px;
+}
+.copyright {
+	float: left;
+	width: 42%;
+	text-align: left;
+}
+.powered {
+	float: right;
+	width: 42%;
+	text-align: right;
+	img {
+		margin: -7px 0 0 3px;
+		opacity: 0.7;
+	}
+	a {
+		border: none;
+	}
+	span {
+		float: right;
+	}
 }
 #mobile-header {
 	display: none;
@@ -600,11 +678,47 @@ footer {
 	#mobile-header {
 		display: block;
 	}
+	.main-content {
+		img {
+			max-width: 100%;
+			margin: 26px auto 30px;
+			display: block;
+			&.right { 
+				float: none !important;
+				margin: 26px auto 30px;
+			}
+			&.left { 
+				float: none !important;
+				margin: 26px auto 30px;
+			}
+		}
+		p {
+			font-size: 12px;
+			line-height: 20px;
+		}
+	}
 	footer {
 		padding: 0;
 		margin: 0 15px 0;
 		text-align: center;
-		border: none;
+	}
+	.bottom-line {
+		margin: 0 0 40px;
+		border-top: 1px dotted rgba(0,0,0,0.16);
+	}
+	.copyright {
+		width: 100%;
+		text-align: center;
+		margin-top: 22px;
+	}
+	.powered {
+		width: 100%;
+		text-align: center;
+		margin-top: 18px;
+		img {
+			display: inline;
+			margin: 0 0 0 4px;
+		}
 	}
 	.show-for-small {
 		display: block;
@@ -643,25 +757,6 @@ footer {
 	h1, h2, h3, h4 {
 		text-align: center;
 	}
-	.main-content {
-		img {
-			max-width: 100%;
-			margin: 26px auto 30px;
-			display: block;
-			&.right { 
-				float: none !important;
-				margin: 26px auto 30px;
-			}
-			&.left { 
-				float: none !important;
-				margin: 26px auto 30px;
-			}
-		}
-		p {
-			font-size: 12px;
-			line-height: 20px;
-		}
-	}
 	.item {
 		text-align: center;
 		.item-title {
@@ -674,6 +769,7 @@ footer {
 		}
 		img {
 			margin: 0;
+			display: inline;
 		}	
 	}
 	article {

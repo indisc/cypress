@@ -22,13 +22,9 @@
 				</article>
 				<!-- endrepeat -->
 
-				<!-- blogpost:default_message --> 
-				<div class="large-12 columns">
-					<div class="row default-message">
-						<i class="barley-icon-cogs"></i>
-						<span class="default-text">There are currently no blog posts to display.</span> 
-					</div>	
-				</div>
+				<!-- item:default_message --> 
+					<div class="default-message blog-list hide-for-small"></div>
+					<div class="default-message mobile show-for-small"></div>
 				<!-- enddefault_message -->
 					
 				<div class="pagination">
@@ -36,11 +32,7 @@
 					<!-- previous --><a href="#" class="newer inactive"><img src="/images/right_arrow.svg"></a><!-- endprevious -->
 				</div>
 
-				<!-- Footer -->
-				<footer>
-					<a class="scrollup"><img src="/images/top_arrow.svg"></a>
-				</footer>
-
+				<!-- @include footer -->
 			</div>
 
 			<!-- Sub-Navigation -->
@@ -58,4 +50,12 @@
 		</div>
 	</div>
 	
-<!-- @include footer -->
+<!-- @include scripts -->
+
+	<script>
+		if($('article').length == 0){ $('.scrollup').css('visibility','hidden'); }
+		if($('article').length < 4){ $('.pagination').hide(); }
+	</script>
+
+</body>
+</html>
