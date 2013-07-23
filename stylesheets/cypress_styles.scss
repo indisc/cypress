@@ -288,7 +288,14 @@ p {
 	h2 a {
 		border: none;
 	}
+	hr {
+		height: 0;
+		border: none;
+		border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+		margin: 42px 0;
+	}
 }
+
 .container {
 	margin: 0 auto;
 	padding: 30px 15px 30px 30px;
@@ -541,7 +548,7 @@ footer {
 	    background-repeat: no-repeat;
 	}
 	&.blog-list {
-		margin: 0;
+		margin: -20px 0 0;
 		min-height: 600px;
 		background-image: url(../image/soon_blog.svg);
 	    background-size: 100%;
@@ -565,7 +572,7 @@ footer {
 .set-thumb {
 	background: rgba(0,0,0,0.04);
 	padding: 30px;
-	margin: 65px 0 60px;
+	margin: 95px 0 60px;
 	h4 {
 		font-size: 42px;
 		margin: 10px 0 24px;
