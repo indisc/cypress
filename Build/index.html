@@ -38,14 +38,13 @@
 				</div>
 				<hr>
 				<nav id="menu">	
-					<ul>
+					<ul data-barley-navigation="vertical">
+						<!-- barleynav -->
 						<li><a href="/">Gallery</a></li>
 						<li><a href="/blog/">Blog</a></li>
 						<li><a href="/about/">About Me</a></li>
-						<!-- navigation -->
-						<li><a href="%URL%">%PAGE%</a></li>
-						<!-- endnavigation -->
 						<li><a href="/contact/">Contact</a></li>
+						<!-- endbarleynav -->
 					</ul>
 				</nav>
 				<hr>
@@ -65,14 +64,16 @@
 
 			<!-- repeat:item:15 -->
 				<div class="large-4 columns item">
-						<div data-barley="item_thumb" data-barley-editor="image-special">
-							<a href="%URL%">%THUMB%</a>
+					<a href="%URL%">
+						<div>
+							%THUMB%
 						</div>
-					<h5 class="item-title"><a href="%URL%"><span data-barley="item_title">%TITLE%</span></a></h5>
+					</a>	
+					<h5 class="item-title"><a href="%URL%"><span>%TITLE%</span></a></h5>
 				</div>
 			<!-- endrepeat -->
 
-			<!-- item:default_message --> 
+			<!-- default_message:item --> 
 				<div class="default-message gallery hide-for-small"></div>
 				<div class="default-message mobile show-for-small"></div>
 			<!-- enddefault_message -->
@@ -102,7 +103,6 @@
 	<script src="/javascripts/jquery.fitvids.js"></script>
 	<script src="/javascripts/jquery.jpanelmenu.min.js"></script>
 	<script src="/javascripts/cypress.js"></script>
-
 
 
 	<script>
