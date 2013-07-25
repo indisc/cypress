@@ -17,7 +17,7 @@ $(document).ready(function(){
 	var $clonelogo = $('#logo').clone();
 	$("#mobile-header").append($clonelogo);
 
-	var $cloneintro = $('#intro').clone();
+	var $cloneintro = $('#intro p').clone();
 	$("#mobile-header").append($cloneintro);
 
 	var $cloneintro = $('#social-icons').clone();
