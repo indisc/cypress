@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
 <head>
-	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<meta name="viewport" content="width=device-width" />
     <title>Cypress, for portfolios</title>
 
@@ -16,10 +16,10 @@
 </head>
 <body>
 
-	<!-- Background Image -->
+	<!-- Background Image 
 	<div id="background" class="hide-for-small" data-barley="bg_image" data-barley-editor="image">
 		<img src="/images/bg.png">
-	</div>	
+	</div>	-->
 
 	<div class="row container">
 		<!-- Mobile Header -->
@@ -72,7 +72,8 @@
 					</div>	
 				</article>	
 					<!-- Footer -->
-		<footer>
+	<div class="hide-for-small">
+		<footer id="footer">
 			<a class="scrollup"><img src="/images/top_arrow.svg"></a>
 			<div class="bottom-line">
 				<div class="copyright" data-barley="copyright" data-barley-editor="simple">
@@ -84,11 +85,13 @@
 				<div class="cf"></div>
 			</div>
 		</footer>
+	</div>
 			</div>
 			
 		</div>
 	</div>
 	
+	<div id="mobile-footer" class="show-for-small"></div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="/javascripts/jquery.sticky.js"></script>

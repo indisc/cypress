@@ -3,6 +3,7 @@
     "creator": "Plain",
     "creator_url": "http://plainmade.com",
     "content_types": {
-    		"item": "Gallery Piece"
+    		"item": "Gallery Piece",
+    		"contact": "Contact Form"
     	}
 }

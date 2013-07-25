@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
 <head>
-	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<meta name="viewport" content="width=device-width" />
     <title>Cypress, for portfolios</title>
 
@@ -16,10 +16,10 @@
 </head>
 <body>
 
-	<!-- Background Image -->
+	<!-- Background Image 
 	<div id="background" class="hide-for-small" data-barley="bg_image" data-barley-editor="image">
 		<img src="/images/bg.png">
-	</div>	
+	</div>	-->
 
 	<div class="row container">
 		<!-- Mobile Header -->
@@ -67,71 +67,51 @@
 					<h2><span data-barley="contact_title" data-barley-editor="mini">Contact Me</span></h2>
 					<!-- Intro -->
 					<div data-barley="contact_intro" data-barley-editor="advanced">
-						<p>Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum.</p>
+						<p>Use this page to give site visitors a way to reach you. List any sites or networks to which you belong. Let people know how and when you will respond. There are spots for links to the right - you can use these for various accounts you have, or for something else entirely.</p>
+						<p>You can add a contact form below by creating a new one in the Barley menu. Simply open the Barley menu and select <i>Page Options</i> ( <i class="barley-icon-file"></i> ) > <i>Create New</i> > <i>Contact Form</i>.</p> 
+						<p><i>Make sure you specify the email address where your messages will be sent under the form's options ("<i>Edit Options</i>" link).</i></p>
 					</div>
-					<!-- Form -->	
-					<div id="barley-form">
-				        
-				        <!--
-				        <input type="hidden" name="to" id="to" value="youremail@yourdomain.com" />
-				        <input type="hidden" name="response_success" id="response_success" value="Thanks! Your message was sent" />
-				        <input type="hidden" name="response_error" id="response_error" value="Sorry, please try again." />
-						-->
+					<!-- repeat:contact:4 -->
+						<h3>%TITLE% <!-- owner --><span class="owner-settings-link"><a href="%URL%">Edit Options <i class="barley-icon-angle-right"></i></a></span><!-- endowner --></h3>
+						<div id="barley-form">
+							<input type="hidden" name="to" id="to" value="%EMAIL%" />
+				        	<input type="hidden" name="response_success" id="response_success" value="%SUCCESS%" />
+				       		<input type="hidden" name="response_error" id="response_error" value="%ERROR%" />
+				       		<div data-barley="contact_inputs">
+						        <div class="field cf">
+						            <label class="inline">Your Name:</label>
+						            <input type="text" id="name" placeholder="John Doe" data-required="true" />
+						        </div>
 
-				        <div class="field cf">
-				            <label class="inline">Your Name:</label>
-				            <input type="text" id="name" placeholder="Jeffrey Lebowski" data-required="true" />
-				        </div>
+						        <div class="field cf">
+						            <label class="inline">Your Email:</label>
+						            <input type="text" id="email" placeholder="john.doe@example.com" data-required="true" />
+						        </div>
 
-				        <div class="field cf">
-				            <label class="inline">Your Email:</label>
-				            <input type="text" id="email" placeholder="dude@mail.com" data-required="true" />
-				        </div>
+						        <div class="field cf">
+						            <label class="inline">Subject:</label>
+						            <input type="text" name="subject" id="to" placeholder="In regards to..." data-required="true" />
+						        </div>
 
-				        <div class="field cf">
-				            <label class="inline">Subject:</label>
-				            <input type="text" name="subject" id="to" placeholder="The dude abides..." data-required="true" />
-				        </div>
+						        <div class="field message cf">
+						            <label class="inline">Message:</label>
+						            <textarea rows="8"></textarea>
+						        </div>
+								
+						        <div class="field cf">
+						            <div class="form-button-box">
+						            	<input type="button" value="Submit" id="barley-submit" class="button" />
+						            </div>
+						        </div>
+						    </div>    
 
-				        <div class="field message cf">
-				            <label class="inline">Message:</label>
-				            <textarea rows="8"></textarea>
-				        </div>
+					        <div id="barley-form-message" style="display:none;">MESSAGE HERE</div>
+					    </div>    
+					<!-- endrepeat -->
 
-						<!-- barley:owner -->
-						<div class="form-settings">
-							<h4>Form Settings</h4>
-							<p>Edit the options for this form below. These options are only visible to you.</p>
-
-							<div class="field cf">
-					            <label class="inline">Email Address:</label>
-					            <input type="email" name="to" id="to" placeholder="Where you'll receive these messages" data-required="true" />
-					        </div>
-					        <div class="field cf">
-					            <label class="inline">Success Message:</label>
-					            <input type="text" name="response_success" id="response_success" value="Thanks! Your message was sent." data-required="true" />
-					        </div>
-					        <div class="field cf">
-					            <label class="inline">Error Message:</label>
-					            <input type="text" name="response_error" id="response_error" value="Sorry, please try again." data-required="true" />
-					        </div>
-
-							<div class="cf"></div>
-						</div>
-						<!-- endbarley -->
-						
-				        <div class="field cf">
-				            <div class="form-button-box">
-				            	<input type="button" value="Submit" id="barley-submit" class="button" />
-				            </div>
-				        </div>
-
-				        <div id="barley-form-message" style="display:none;">MESSAGE HERE</div>
-
-				        
-				    </div>
 					<!-- Footer -->
-		<footer>
+	<div class="hide-for-small">
+		<footer id="footer">
 			<a class="scrollup"><img src="/images/top_arrow.svg"></a>
 			<div class="bottom-line">
 				<div class="copyright" data-barley="copyright" data-barley-editor="simple">
@@ -143,6 +123,7 @@
 				<div class="cf"></div>
 			</div>
 		</footer>
+	</div>
 			</div>
 
 			<!-- Sub-Navigation -->
@@ -162,6 +143,7 @@
 		</div>
 	</div>
 	
+	<div id="mobile-footer" class="show-for-small"></div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="/javascripts/jquery.sticky.js"></script>

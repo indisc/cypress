@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
 <head>
-	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<meta name="viewport" content="width=device-width" />
     <title>Cypress, for portfolios</title>
 
@@ -16,10 +16,10 @@
 </head>
 <body>
 
-	<!-- Background Image -->
+	<!-- Background Image 
 	<div id="background" class="hide-for-small" data-barley="bg_image" data-barley-editor="image">
 		<img src="/images/bg.png">
-	</div>	
+	</div>	-->
 
 	<div class="row container">
 		<!-- Mobile Header -->
@@ -65,19 +65,16 @@
 			<div class="large-10 columns">
 				<article>
 					<!-- Title of Page -->
-					<h2><span data-barley="about_title" data-barley-editor="mini">Title</span></h2>
+					<h2><span data-barley="about_title" data-barley-editor="mini">About Me</span></h2>
 					<!-- Post Content -->
 					<div data-barley="about_content" data-barley-editor="advanced">
-						<p>Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.</p>
-						<p>Cusociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. <a href="#">Lorem ipsum dolor sit</a> amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-						<p>Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.</p>
-						<p>Cusociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-						<img src="http://placehold.it/200x200&text=right" class="right"><p>Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.Cusociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-						<img src="http://placehold.it/200x200&text=left" class="left"><p>Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur.Cusociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+						<p>Use this page to tell site visitors about yourself. You can fill this area with text, images or anything you have embed code for (maps, videos, etc.). Use our editor to add headlines, lists, links and more. There are links in a column to the right that can be used for links to social accounts or other sites/pages.</p>
+						<img src="images/image_thumb.jpg" class="right" width="200"><p>Images can be aligned to the left or right by using the image editor. Simply bring up the editor by clicking on the image > edit icon ( <i class="barley-icon-edit"></i> ) and type either "left" or "right" in the class field. You can also change the size of an image and the title here as well. An existing image, such as the one to the right, can be replaced or removed. Replacing an image will cause the new image to be cropped to the dimensions of the original. This can come in handy for certain situations. To place an image on the page with different dimensions, simply remove the original and add the new one.</p>
 					</div>	
 				</article>	
 					<!-- Footer -->
-		<footer>
+	<div class="hide-for-small">
+		<footer id="footer">
 			<a class="scrollup"><img src="/images/top_arrow.svg"></a>
 			<div class="bottom-line">
 				<div class="copyright" data-barley="copyright" data-barley-editor="simple">
@@ -89,6 +86,7 @@
 				<div class="cf"></div>
 			</div>
 		</footer>
+	</div>
 			</div>
 
 			<!-- Sub-Navigation -->
@@ -107,6 +105,7 @@
 		</div>
 	</div>
 	
+	<div id="mobile-footer" class="show-for-small"></div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="/javascripts/jquery.sticky.js"></script>

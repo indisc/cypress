@@ -4,12 +4,6 @@ $(document).ready(function(){
     $("#sticker").sticky({topSpacing:30,getWidthFrom:'.large-2'});
     $("#stickersub").sticky({topSpacing:30,getWidthFrom:'.right-sidebar'});
     $("#content").fitVids();
-    
-	 // Scroll to top  
-	$('.scrollup').click(function(){
-	    $("html, body").animate({ scrollTop: 0 }, 600);
-	    return false;
-	});
 
 	// jPanel mobile menu
 	var jPM = $.jPanelMenu({
@@ -28,6 +22,22 @@ $(document).ready(function(){
 
 	var $cloneintro = $('#social-icons').clone();
 	$("#jPanelMenu-menu").append($cloneintro);
+
+	var $clonefooter = $('#footer').clone();
+	$("#mobile-footer").append($clonefooter);	
+
+	// Scroll to top  
+	$('.scrollup').click(function(){
+	    $("html, body").animate({ scrollTop: 0 }, 600);
+	    return false;
+	});
+
+	var div = $(".main-content").height();
+    var doc = $(window).height();
+
+    if (div > doc ) {
+        $(".main-content").addClass('tall');
+    }
 
  });
   

@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
 <head>
-	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<meta name="viewport" content="width=device-width" />
     <title>Cypress, for portfolios</title>
 
@@ -16,10 +16,10 @@
 </head>
 <body>
 
-	<!-- Background Image -->
+	<!-- Background Image 
 	<div id="background" class="hide-for-small" data-barley="bg_image" data-barley-editor="image">
 		<img src="/images/bg.png">
-	</div>	
+	</div>	-->
 
 	<div class="row container">
 		<!-- Mobile Header -->
@@ -81,10 +81,19 @@
 				</article>
 				<!-- endrepeat -->
 
-				<!-- default_message:item --> 
-					<div class="default-message blog-list hide-for-small"></div>
-					<div class="default-message mobile show-for-small"></div>
+				<!-- default_message:blogpost --> 
+					<!-- Title -->
+					<h2><span>Coming Soon</span></h2>
+					<!-- Meta -->
+					<div>
+						<p>Check back in the near future for some exciting and insightful posts...</p>
+					</div>	
+					<!-- owner -->
+					<p>You must first compose and publish a blog post for it to be indexed here. You can create a new post from the Barley menu. Open the Barley menu in the top right corner of the screen and select <i>Page Options</i> ( <i class="barley-icon-file"></i> ) > <i>Create New</i> > <i>Post</i>.</p>
+					<!-- endowner -->
 				<!-- enddefault_message -->
+
+				<div style="margin-bottom:200px;"></div>
 					
 				<div class="pagination">
 					<!-- next --><a href="#" class="older"><img src="/images/right_arrow.svg"></a><!-- endnext -->
@@ -92,7 +101,8 @@
 				</div>
 
 					<!-- Footer -->
-		<footer>
+	<div class="hide-for-small">
+		<footer id="footer">
 			<a class="scrollup"><img src="/images/top_arrow.svg"></a>
 			<div class="bottom-line">
 				<div class="copyright" data-barley="copyright" data-barley-editor="simple">
@@ -104,6 +114,7 @@
 				<div class="cf"></div>
 			</div>
 		</footer>
+	</div>
 			</div>
 
 			<!-- Sub-Navigation -->
@@ -121,6 +132,7 @@
 		</div>
 	</div>
 	
+	<div id="mobile-footer" class="show-for-small"></div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="/javascripts/jquery.sticky.js"></script>
