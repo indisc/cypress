@@ -9,7 +9,8 @@ $(document).ready(function(){
 	var jPM = $.jPanelMenu({
 	    menu: '#menu',
 	    trigger: '.menu-trigger',
-	    duration: 300
+	    duration: 300,
+        excludedPanelContent: "#barley-bar, #barley-bar-all-sites-modal"
 	});
 	jPM.on();
 
@@ -24,9 +25,9 @@ $(document).ready(function(){
 	$("#jPanelMenu-menu").append($cloneintro);
 
 	var $clonefooter = $('#footer').clone();
-	$("#mobile-footer").append($clonefooter);	
+	$("#mobile-footer").append($clonefooter);
 
-	// Scroll to top  
+	// Scroll to top
 	$('.scrollup').click(function(){
 	    $("html, body").animate({ scrollTop: 0 }, 600);
 	    return false;
@@ -40,4 +41,3 @@ $(document).ready(function(){
     }
 
  });
-  
