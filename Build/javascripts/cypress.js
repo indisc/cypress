@@ -10,7 +10,7 @@ $(document).ready(function(){
 	    menu: '#menu',
 	    trigger: '.menu-trigger',
 	    duration: 300,
-        excludedPanelContent: "#barley-bar, #barley-bar-all-sites-modal"
+        excludedPanelContent: "#barley-bar, .barley-bar-modal"
 	});
 	jPM.on();
 
