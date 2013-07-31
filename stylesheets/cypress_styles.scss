@@ -390,7 +390,7 @@ footer {
 .main-content.tall {
 	footer {
 		a.scrollup {
-			display: inline;
+			display: block;
 		}
 	}
 }
@@ -441,6 +441,7 @@ footer {
 		img {
 			max-width: 14px;
 			padding: 0 2px;
+			margin: 11px 0 13px;
 		}
 		&.older {
 			float: right;

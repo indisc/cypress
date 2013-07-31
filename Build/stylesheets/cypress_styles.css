@@ -1193,7 +1193,7 @@ footer {
       transition: opacity .7s ease-in-out; }
 
 .main-content.tall footer a.scrollup {
-  display: inline; }
+  display: block; }
 
 .sub-nav {
   border-top: 1px dotted rgba(0, 0, 0, 0.3);
@@ -1241,7 +1241,8 @@ footer {
     margin-top: 4px; }
     .pagination a img {
       max-width: 14px;
-      padding: 0 2px; }
+      padding: 0 2px;
+      margin: 11px 0 13px; }
     .pagination a.older {
       float: right; }
     .pagination a.newer {
