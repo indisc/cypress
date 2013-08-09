@@ -1338,21 +1338,21 @@ footer {
   .default-message.gallery {
     margin: 0 15px;
     min-height: 800px;
-    background-image: url(../images/soon.svg);
+    background-image: url(../image/soon.svg);
     background-size: 100%;
     background-position: center top;
     background-repeat: no-repeat; }
   .default-message.mobile {
     margin: 0 15px 20px;
     min-height: 260px;
-    background-image: url(../images/soon_mobile.svg);
+    background-image: url(../image/soon_mobile.svg);
     background-size: 100%;
     background-position: center top;
     background-repeat: no-repeat; }
   .default-message.blog-list {
     margin: -20px 0 0;
     min-height: 600px;
-    background-image: url(../images/soon_blog.svg);
+    background-image: url(../image/soon_blog.svg);
     background-size: 100%;
     background-position: center top;
     background-repeat: no-repeat; }
@@ -1525,7 +1525,15 @@ footer {
     padding: 0; }
 
   #mobile-header {
-    display: block; }
+    display: block;
+    padding: 0 30px 10px; }
+    #mobile-header p {
+      text-align: center;
+      border-top: 1px dotted rgba(0, 0, 0, 0.4);
+      border-bottom: 1px dotted rgba(0, 0, 0, 0.4);
+      padding: 10px 4px 11px;
+      font-size: 13px;
+      margin-top: 34px; }
 
   .main-content img {
     max-width: 100%;

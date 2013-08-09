@@ -757,6 +757,16 @@ footer {
 	}
 	#mobile-header {
 		display: block;
+		padding: 0 30px 10px;
+		p {
+			text-align: center;
+			border-top: 1px dotted rgba(0,0,0,0.4);
+			border-bottom: 1px dotted rgba(0,0,0,0.4);
+			padding: 10px 4px 11px;
+			font-size: 13px;
+			margin-top: 34px;
+
+		}
 	}
 	.main-content {
 		img {
