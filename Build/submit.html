@@ -5,7 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<meta name="viewport" content="width=device-width" />
-    <title></title>
+    <title>The Watercolor Gallery</title>
 
     <link rel="stylesheet" href="/stylesheets/normalize.css" />
     <link rel="stylesheet" href="/stylesheets/cypress_styles.css" />
@@ -33,28 +33,29 @@
 					<a href="/"><img src="/images/cypress_logo.svg" class="logo" id="logo"></a>
 				</div>
 				<hr>
-				<div id="intro" data-barley="site_index_title" data-barley-editor="simple">
-					<p>Cypress, for portfolios</p>
+				<div id="intro">
+					<p><strong>The Watercolor Gallery</strong></p>
+					<p>A gallery of inspirational watercolor paintings from artists all over the world curated by <a href="http://colin.getbarley.com/">Colin Devroe</a>.</p>
 				</div>
 				<hr>
-				<nav id="menu">	
+				<nav id="menu">
 					<ul data-barley-navigation="left">
 						<!-- barleynav -->
-						<li><a href="/">Gallery</a></li>
-						<li><a href="/blog/">Blog</a></li>
-						<li><a href="/about/">About Me</a></li>
-						<li><a href="/contact/">Contact</a></li>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="/gallery.html">Gallery</a></li>
+						<li><a href="/interviews.html">Interviews</a></li>
+						<li><a href="/artspaces.html">Art Spaces</a></li>
+						<li><a href="/videos.html">Videos</a></li>
+						<li><a href="/about.html">About</a></li>
+						<li><a href="/submit.html">Submit</a></li>
 						<!-- endbarleynav -->
 					</ul>
 				</nav>
 				<hr>
 				<div data-barley="social_icons" data-barley-editor="advanced">
 				<p id="social-icons">
-					<a href="http://twitter.com/getbarley"><img src="/images/social_icons/twitter.svg" class="icon"></a>
-					<a href="http://facebook.com/"><img src="/images/social_icons/facebook.svg" class="icon"></a>
-					<a href="http://dribbble.com/"><img src="/images/social_icons/dribbble.svg" class="icon"></a>
-					<a href="http://instagram.com/"><img src="/images/social_icons/instagram.svg" class="icon"></a>
-					<a href="http://flickr.com/photos/"><img src="/images/social_icons/flickr.svg" class="icon"></a>
+					<a href="http://twitter.com/h2ocolor"><img src="/images/social_icons/twitter.svg" class="icon"></a>
+					<a href="http://facebook.com/h2ocolor"><img src="/images/social_icons/facebook.svg" class="icon"></a>
 				</p>
 				</div>	
 			</div>
@@ -64,14 +65,14 @@
 		<div class="large-10 columns main-content" id="content">
 			<div class="large-10 columns">
 					<!-- Title -->
-					<h2><span data-barley="contact_title" data-barley-editor="mini">Contact Me</span></h2>
+					<h2><span data-barley="submitforms_title" data-barley-editor="mini">Contact Me</span></h2>
 					<!-- Intro -->
-					<div data-barley="contact_intro" data-barley-editor="advanced">
+					<div data-barley="submitforms_intro" data-barley-editor="advanced">
 						<p>Use this page to give site visitors a way to reach you. List any sites or networks to which you belong. Let people know how and when you will respond. There are spots for links to the right - you can use these for various accounts you have, or for something else entirely.</p>
 						<p>You can add a contact form below by creating a new one in the Barley menu. Simply open the Barley menu and select <i>Page Options</i> ( <i class="barley-icon-file"></i> ) > <i>Create New</i> > <i>Contact Form</i>.</p> 
 						<p><i>Make sure you specify the email address where your messages will be sent under the form's options ("<i>Edit Options</i>" link).</i></p>
 					</div>
-					<!-- repeat:contact:4 -->
+					<!-- repeat:submit:1 -->
 						<h3>%TITLE% <!-- owner --><span class="owner-settings-link"><a href="%URL%">Edit Options <i class="barley-icon-angle-right"></i></a></span><!-- endowner --></h3>
 						<div id="barley-form">
 							<input type="hidden" name="to" id="to" value="%EMAIL%" />
@@ -129,7 +130,7 @@
 			<!-- Sub-Navigation -->
 			<div class="large-2 columns right-sidebar">
 				<div id="stickersub">
-					<nav class="sub-nav" data-barley="contact_subnav" data-barley-editor="plus">
+					<nav class="sub-nav" data-barley="submitforms_subnav" data-barley-editor="plus">
 						<ul>
 							<li><a href="#">Skype</a></li>
 							<li><a href="#">Email</a></li>

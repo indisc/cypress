@@ -1,9 +1,12 @@
 {
-    "name": "Cypress",
-    "creator": "Plain",
-    "creator_url": "http://plainmade.com",
+    "name": "Cypress - Forked for The Watercolor Gallery",
+    "creator": "Kyle Ruane and Colin Devroe",
+    "creator_url": "http://h2ocolor.com",
+    "blog": "gallery",
     "content_types": {
-    		"item": "Gallery Piece",
-    		"contact": "Contact Form"
+    		"artspaces": "Art Space",
+    		"interviews": "Artist Interview",
+    		"videos": "Video",
+    		"submit": "Submission Form"
     	}
 }

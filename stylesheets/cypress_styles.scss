@@ -64,7 +64,10 @@ h2 {
 			margin-top: 44px;
 			text-transform: none;
 		}
-	}	
+	}
+	&.hidden-posttitle {
+		display: none;
+	}
 }
 h3 {
 	font-size: 40px;
@@ -78,6 +81,9 @@ h4 {
 	padding-bottom: 0;
 }	
 article {
+	h2 {
+		text-transform: none;
+	}
 	h5 {
 		font-size: 16px;
 		margin: 34px 0 20px;
@@ -166,6 +172,9 @@ p {
 		line-height: 16px;
 		margin: 16px 2px;
 		font-style: italic;
+		a {
+			color: $secondary;
+		}
 	}
 	img {
 		&.icon {
@@ -308,11 +317,11 @@ p {
 		font-weight: 100;
 		font-size: 13px;
 		display: block;
-		height: 36px;
+		height: 56px;
 		padding: 11px 10px;
 		background: rgba(0,0,0,0.7);
 		color: white;			
-		margin: -36px 0 0;
+		margin: -56px 0 0;
 		position: relative;
 		width: 100%;
 		overflow: hidden;
@@ -330,6 +339,29 @@ p {
 		}
 	}
 	img {
+		margin: 0;
+		opacity: 1;
+		@include long-fade;
+	}
+	&:hover {
+		.item-title {
+			padding: 11px 10px;
+			opacity: 1;
+			@include long-fade;
+			a {
+				display: block;
+			}	
+		}
+		img {
+			opacity: 0.7;
+			@include long-fade;
+		}
+	}
+}
+.moreitems {
+	margin-bottom: 30px;
+	img {
+		width: 120px;
 		margin: 0;
 		opacity: 1;
 		@include long-fade;

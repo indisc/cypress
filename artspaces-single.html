@@ -4,16 +4,20 @@
 		<!-- Content -->
 		<div class="large-10 columns main-content">
 			<div class="large-12 columns item-detail">
-				<!-- Title -->
-				<h2><span data-barley="item_title" data-barley-editor="mini">Title</span><a href="/index" class="back-link">Back</a></h2>
-				<div data-barley="item_details" data-barley-editor="advanced">
+				<div data-barley="artspaces_body" data-barley-editor="advanced">
 					<img src="images/image.jpg">
 					<p>Add an image by replacing the placeholder above, which will crop it to a square <i>or</i> delete the placeholder and add a new image by invoking the editor <em>(hint: shortcut to do this is cmd+e on mac, ctrl+e on windows)</em> and clicking the "<i class="barley-icon-plus-sign-alt"></i>" icon. You can add as many images as you want. Other elements such as videos can be embedded as well. </p>
-				</div>	
+				</div>
+				<p><span class="published_on publish-date" data-barley="artspaces_published_on" id="artspaces_published_on">(Publish Date)</span></p>
+
+				<!-- owner -->
+					<h2><span data-barley="artspaces_title" data-barley-editor="mini">Post Title</span></h2>
+					<!-- endowner -->
+				<h2 class="hidden-posttitle"><span data-barley="artspaces_title" data-barley-editor="mini">Post Title</span></h2>
 
 				<!-- owner -->
 				<div class="set-thumb">
-					<div class="set-thumb-target" data-barley="item_thumb" data-barley-editor="image">
+					<div class="set-thumb-target" data-barley="artspaces_thumb" data-barley-editor="image">
 						<img src="images/image_thumb.jpg">
 					</div>
 					<h4>Set the thumbnail image for this page</h4>

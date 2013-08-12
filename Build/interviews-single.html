@@ -65,14 +65,31 @@
 		<div class="large-10 columns main-content" id="content">
 			<div class="large-10 columns">
 				<article>
-					<!-- Title of Page -->
-					<h2><span data-barley="about_title" data-barley-editor="mini">About Me</span></h2>
+					<!-- Title -->
+					<h2><span data-barley="interviews_title" data-barley-editor="mini">Post Title</span></h2>
+					<!-- Meta -->
+					<div class="meta cf">
+						<span class="published_on publish-date" data-barley="interviews_published_on" id="interviews_published_on">(Publish Date)</span>
+					</div>
 					<!-- Post Content -->
-					<div data-barley="about_content" data-barley-editor="advanced">
-						<p>Use this page to tell site visitors about yourself. You can fill this area with text, images or anything you have embed code for (maps, videos, etc.). Use our editor to add headlines, lists, links and more. There are links in a column to the right that can be used for links to social accounts or other sites/pages.</p>
-						<img src="images/image_thumb.jpg" class="right" width="200"><p>Images can be aligned to the left or right by using the image editor. Simply bring up the editor by clicking on the image > edit icon ( <i class="barley-icon-edit"></i> ) and type either "left" or "right" in the class field. You can also change the size of an image and the title here as well. An existing image, such as the one to the right, can be replaced or removed. Replacing an image will cause the new image to be cropped to the dimensions of the original. This can come in handy for certain situations. To place an image on the page with different dimensions, simply remove the original and add the new one.</p>
+					<div data-barley="interviews_body" data-barley-editor="advanced">
+						<p>Compose your blog post here. Use text, images and other embed-able elements (maps, videos, etc.). Use our editor to <a href="http://getbarley.com/">add links to your text</a>, or use <strong>bold</strong> and <em>italics</em> plus headlines, lists and more. To pull up the Barley editor, either select some text or use the keyboard shortcut ctrl+e when your cursor is in an editable region.</p>
+						<p>To publish this post, click the "<i class="barley-icon-publish-post"></i>" icon below the Barley menu icon in the upper right corner. Prior to clicking the publish button, this post will be saved as a draft. You can access drafts in the Barley menu > <i>Page Options</i> ( <i class="barley-icon-file"></i> ) > <i>View Drafts</i>. To delete this posts entirely, click the "<i class="barley-icon-delete-post"></i>" icon in the upper right corner, above the publish button. After publishing this post, it will be indexed on the Blog page along with other published posts, listed in reverse chronological order.</p>
+						<p>Happy writing...</p>
 					</div>	
-				</article>	
+				</article>
+
+				<!-- owner -->
+				<div class="set-thumb">
+					<div class="set-thumb-target" data-barley="interviews_thumb" data-barley-editor="image">
+						<img src="images/image_thumb.jpg">
+					</div>
+					<h4>Set the thumbnail image for this page</h4>
+					<p>Click on the placeholder image to the right and replace it with a new one that represents the content of this page. This image will display on the home/gallery page.</p>
+					<span>This area is only visible to you, the author of this site.</span> 
+					<div class="cf"></div>
+				</div>
+				<!-- endowner -->
 					<!-- Footer -->
 	<div class="hide-for-small">
 		<footer id="footer">
@@ -91,17 +108,16 @@
 			</div>
 
 			<!-- Sub-Navigation -->
-			<div class="large-2 columns right-sidebar">
+			<!--<div class="large-2 columns right-sidebar">
 				<div id="stickersub">
-					<nav class="sub-nav" data-barley="about_subnav" data-barley-editor="plus">
+					<nav class="sub-nav">
 						<ul>
-							<li><a href="#">Resume</a></li>
-							<li><a href="#">LinkedIn</a></li>
-							<li><a href="#">Zerply</a></li>
+							<li><a href="/blog">Newest</a></li>
+							<li><a href="/blog/feed">Subscribe</a></li>	
 						</ul>
 					</nav>
 				</div>	
-			</div>
+			</div>-->
 			
 		</div>
 	</div>
@@ -114,6 +130,10 @@
 	<script src="/javascripts/jquery.jpanelmenu.min.js"></script>
 	<script src="/javascripts/cypress.js"></script>
 
+
+	<script>
+		if($('article').length == 0){ $('.scrollup').css('visibility','hidden'); }
+	</script>
 
 </body>
 </html>

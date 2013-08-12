@@ -2,7 +2,7 @@
 <!-- @include sidebar -->
 
 		<div class="large-10 columns main-content cf">
-			<!-- repeat:item:15 -->
+			<!-- repeat:blogpost:6 -->
 				<div class="large-4 columns item">
 					<a href="%URL%">
 						<div>
@@ -12,21 +12,54 @@
 					<h5 class="item-title"><a href="%URL%"><span>%TITLE%</span></a></h5>
 				</div>
 			<!-- endrepeat -->
-			
-			<!-- default_message:item --> 
-			<div class="gallery-default">
-				<!-- Title -->
-				<h2><span>Coming Soon</span></h2>
-				<div>
-					<p>Check back in the near future for some engaging visuals...</p>
-				</div>	
-				<!-- owner -->
-				<p>You must first create a gallery piece for it to be indexed here. You can create one from the Barley menu. Open the Barley menu in the top right corner of the screen and select <i>Page Options</i> ( <i class="barley-icon-file"></i> ) > <i>Create New</i> > <i>Gallery Piece</i>.</p>
-				<!-- endowner -->
-			</div>
-			<!-- enddefault_message -->
-
 			<div class="cf"></div>
+
+			<h3><span>A Recent Interview, Art Space & Video</span></h3>
+			<!-- repeat:interviews:1 -->
+				<div class="large-4 columns item">
+					<a href="%URL%">
+						<div>
+							%THUMB%
+						</div>
+					</a>	
+					<h5 class="item-title"><a href="%URL%"><span>%TITLE%</span></a></h5>
+				</div>
+			<!-- endrepeat -->
+			<!-- repeat:artspaces:1 -->
+				<div class="large-4 columns item">
+					<a href="%URL%">
+						<div>
+							%THUMB%
+						</div>
+					</a>	
+					<h5 class="item-title"><a href="%URL%"><span>%TITLE%</span></a></h5>
+				</div>
+			<!-- endrepeat -->
+			<!-- repeat:videos:1 -->
+				<div class="large-4 columns item">
+					<a href="%URL%">
+						<div>
+							%THUMB%
+						</div>
+					</a>	
+					<h5 class="item-title"><a href="%URL%"><span>%TITLE%</span></a></h5>
+				</div>
+			<!-- endrepeat -->
+			<div class="cf"></div>
+
+			<h3><span>More from the Gallery</span></h3>
+			<!-- repeat:blogpost:12:7 -->
+				<div class="large-2 columns item moreitems">
+					<a href="%URL%">
+						<div>
+							%THUMB%
+						</div>
+					</a>	
+					<!-- <h5 class="item-title"><a href="%URL%"><span>%TITLE%</span></a></h5>-->
+				</div>
+			<!-- endrepeat -->
+			<div class="cf"></div>
+
 			<div class="large-12 columns">
 				<!-- @include footer -->
 			</div>	
