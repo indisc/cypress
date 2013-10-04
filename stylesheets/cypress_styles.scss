@@ -957,3 +957,10 @@ footer {
 		}
 	}
 }	
+
+.column:last-child {
+	float: left;
+}
+.item_order { 
+	display: none;
+}

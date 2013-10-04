@@ -110,11 +110,90 @@
 	<div id="mobile-footer" class="show-for-small"></div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<!-- owner -->
+	<script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<!-- endowner -->
 	<script src="/javascripts/jquery.sticky.js"></script>
 	<script src="/javascripts/jquery.fitvids.js"></script>
 	<script src="/javascripts/jquery.jpanelmenu.min.js"></script>
 	<script src="/javascripts/cypress.js"></script>
 
+
+	<script type="text/javascript">
+		(function($){
+		   $.fn.sortChildrenByDataKey = function(key, desc){
+		      var i, els = this.children().sort(function(a, b) {
+		      	return (desc?1:-1)*($(a).data(key) - $(b).data(key));
+		      });
+		      for (i = 0; i < els.length; i++) {
+		          this.prepend($(els[i]).detach());
+		      }
+		      return this;
+		  };
+		})(jQuery);
+
+		$(document).ready(function(){
+
+			// After the page loads, reorder the items based on the data-order attribute
+			$('.topgallery').sortChildrenByDataKey('order', false);
+			$('.bottomgallery').sortChildrenByDataKey('order', false);
+
+		});
+
+	</script>
+	<!-- owner -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$(function() {
+    			$( ".topgallery" ).sortable({
+    				items: "> .item", 
+    				stop: function() { // When drag is complete, do all of the following
+    					draggable_items = $('.topgallery').children(); // Get all items within the sortable wrapper(s)
+    					var item_id;
+  
+    					for (icarus = 0; icarus < draggable_items.length; icarus++) {
+    						
+    						item_id = $(draggable_items[icarus]).attr('data-item-id'); // The numeric Barley ID for this item.
+
+    						$(draggable_items[icarus]).attr('data-order',icarus); // Update data-order attribute for item dragged
+
+    						$('#item_order_'+item_id).addClass('isModified').text(icarus); // Update data-barley order number for this item, add isModified class
+
+    						barley.client.execute($('#item_order_'+item_id)); // Force Barley to save this key without needing to "type" with the keyboard.
+    						
+    					}
+    				}
+    			});
+    			$( ".topgallery" ).disableSelection();
+  			});
+
+
+			$(function() {
+				$( ".bottomgallery" ).sortable({
+    				items: "> .item", 
+    				stop: function() { // When drag is complete, do all of the following
+    					draggable_items = $('.bottomgallery').children(); // Get all items within the sortable wrapper(s)
+    					var item_id;
+  
+    					for (icarus = 0; icarus < draggable_items.length; icarus++) {
+    						
+    						item_id = $(draggable_items[icarus]).attr('data-item-id'); // The numeric Barley ID for this item.
+
+    						$(draggable_items[icarus]).attr('data-order',icarus); // Update data-order attribute for item dragged
+
+    						$('#item_order_'+item_id).addClass('isModified').text(icarus); // Update data-barley order number for this item, add isModified class
+
+    						barley.client.execute($('#item_order_'+item_id)); // Force Barley to save this key without needing to "type" with the keyboard.
+    						//alert('Saved.');
+    					}
+    				}
+	    		});
+	    		$( ".bottomgallery" ).disableSelection();
+			});
+		});
+	</script>
+	<!-- endowner -->
 
 </body>
 </html>

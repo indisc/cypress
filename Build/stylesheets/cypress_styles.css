@@ -1692,3 +1692,8 @@ footer {
     font-size: 12px;
     padding: 9px 14px 10px;
     border-radius: 0; } }
+.column:last-child {
+  float: left; }
+
+.item_order {
+  display: none; }
