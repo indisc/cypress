@@ -103,10 +103,40 @@
 	<div id="mobile-footer" class="show-for-small"></div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<!-- owner -->
+	<script src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<!-- endowner -->
 	<script src="/javascripts/jquery.sticky.js"></script>
 	<script src="/javascripts/jquery.fitvids.js"></script>
 	<script src="/javascripts/jquery.jpanelmenu.min.js"></script>
 	<script src="/javascripts/cypress.js"></script>
+
+	<!-- owner -->
+	<script type="text/javascript">
+	$(function() { // When logged in allow items to be sorted on homepage
+		$( ".homepagegallery" ).sortable({
+			items: "> .item", 
+			stop: function() { // When drag is complete, do all of the following
+				draggable_items = $('.homepagegallery').children(); // Get all items within the sortable wrapper(s)
+				var item_id;
+
+				for (icarus = 0; icarus < draggable_items.length; icarus++) {
+					
+					item_id = $(draggable_items[icarus]).attr('data-item-id'); // The numeric Barley ID for this item.
+
+					$(draggable_items[icarus]).attr('data-order',icarus); // Update data-order attribute for item dragged
+
+					$('#item_order_'+item_id).addClass('isModified').text(icarus); // Update data-barley order number for this item, add isModified class
+
+					barley.client.execute($('#item_order_'+item_id)); // Force Barley to save this key without needing to "type" with the keyboard.
+					
+				}
+			}
+		});
+		$( ".homepagegallery" ).disableSelection();
+	});
+	</script>
+	<!-- endowner -->
 
 
 </body>
