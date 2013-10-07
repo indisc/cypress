@@ -926,7 +926,7 @@ footer {
 	}
 }	
 
-.column:last-child {
+.columns:last-child, .columns .columns:last-child {
 	float: left;
 }
 .item_order { 
