@@ -46,4 +46,21 @@ $(document).ready(function(){
 	    });
 	}
 
+
+	if ( $('[id$=_published_on]').length > 0 ) {
+
+		var publishedOn =               new Date( $('[id$=_published_on]').html() );
+
+		var secondsSincePublished =     Math.floor( (new Date() - publishedOn) / 1000 );
+		var daysSincePublished =        Math.floor( secondsSincePublished / 86400 );
+
+		if ( daysSincePublished > 14 ) {
+	    	console.log('It has been '+daysSincePublished+' days since this post was published so we are going to show a Google Ad.');
+	    	(adsbygoogle = window.adsbygoogle || []).push({});
+		} else {
+			console.log('It has only been '+daysSincePublished+' days since this post was published so we are not going to show a Google Ad.');
+		}
+		
+	}
+
  });
