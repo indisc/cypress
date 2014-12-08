@@ -14,7 +14,7 @@ This source can be used in any content management system. It is just HTML, CSS, 
 
 ## Simple: Using Cypress on Barley CMS
 
-- Navigate to the preview site
+- Navigate to [the preview site](http://preview-cypress.getbarley.com/)
 - Click “Use this Template” button (this will create a new Barley CMS site with the latest code)
 - Optional: When you sync to Dropbox with Barley CMS, it will push the files for this template into your Dropbox directory
 - Make edits to the local files.
@@ -32,7 +32,7 @@ Or,
 - Sync to Barley CMS
 
 
-Note: You’ll need to build the HTML with Hammer for Mac (or you can use your own way). And the CSS is compiled using SASS.
+Note: You’ll need to build the HTML with [Hammer for Mac](http://hammerformac.com/) (or you can use your own way). And the CSS is compiled using SASS.
 
 # Screenshots
 
