@@ -62,4 +62,12 @@ $(document).ready(function(){
 	// After the page loads, reorder the items based on the data-order attribute
 	$('.homepagegallery').sortChildrenByDataKey('order', false);
 
+	// Loop through the gallery item posts on the home page.
+	// If the titles are too long, truncate them a bit.
+	$('.homepagegallery .item-title a span').each(function(e){
+		if ($(this).text().length > 28) {
+			$(this).text($(this).text().substr(0,28) + '...');
+		}
+	});
+
  });
