@@ -67,42 +67,44 @@
 		<!-- Content -->
 		<div class="large-10 columns main-content" id="content">
 			<div class="large-10 columns">
+				<span data-barley="blog_title" style="display:none">Blog Posts</span>
+				
+				<!-- repeat:blogpost:4 -->
 				<article>
 					<!-- Title -->
-					<h2><span data-barley="interviews_title" data-barley-editor="mini">Post Title</span></h2>
+					<h2><a href="%URL%" title="Link to %TITLE%">%TITLE%</a></h2>
 					<!-- Meta -->
 					<div class="meta cf">
-						<span class="published_on publish-date" data-barley="interviews_published_on" id="interviews_published_on">(Publish Date)</span>
+						<a href="%URL%" class="published_on publish-date" id="blogpost_%ID%_published_on" data-barley-publish-post="%ID%">%PUBLISHED_ON%</a>
 					</div>
-					<!-- Post Content -->
-					<div data-barley="interviews_body" data-barley-editor="advanced">
-						<p>Compose your blog post here. Use text, images and other embed-able elements (maps, videos, etc.). Use our editor to <a href="http://getbarley.com/">add links to your text</a>, or use <strong>bold</strong> and <em>italics</em> plus headlines, lists and more. To pull up the Barley editor, either select some text or use the keyboard shortcut ctrl+e when your cursor is in an editable region.</p>
-						<p>To publish this post, click the "<i class="barley-icon-publish-post"></i>" icon below the Barley menu icon in the upper right corner. Prior to clicking the publish button, this post will be saved as a draft. You can access drafts in the Barley menu > <i>Page Options</i> ( <i class="barley-icon-file"></i> ) > <i>View Drafts</i>. To delete this posts entirely, click the "<i class="barley-icon-delete-post"></i>" icon in the upper right corner, above the publish button. After publishing this post, it will be indexed on the Blog page along with other published posts, listed in reverse chronological order.</p>
-						<p>Happy writing...</p>
+					<div data-barley="blogpost_excerpt" data-barley-editor="advanced">
+						%EXCERPT%
 					</div>
-					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-					<!-- h2o-banner -->
-					<ins class="adsbygoogle"
-					     style="display:inline-block;width:468px;height:60px"
-					     data-ad-client="ca-pub-3442788126665616"
-					     data-ad-slot="7432470571"></ins>
-					<script>
-					//(adsbygoogle = window.adsbygoogle || []).push({});
-					</script>
-						
+					<!-- barleyglyph --><p><a href="%BARLEY_URL%" title="Link to %TITLE%">#</a></p><!-- endbarleyglyph -->	
+					<div class="read-more">
+						<a href="%URL%">Read More...</a>
+					</div>
 				</article>
+				<!-- endrepeat -->
 
-				<!-- owner -->
-				<div class="set-thumb">
-					<div class="set-thumb-target" data-barley="interviews_thumb" data-barley-editor="image">
-						<img src="images/image_thumb.jpg">
-					</div>
-					<h4>Set the thumbnail image for this page</h4>
-					<p>Click on the placeholder image to the right and replace it with a new one that represents the content of this page. This image will display on the home/gallery page.</p>
-					<span>This area is only visible to you, the author of this site.</span> 
-					<div class="cf"></div>
+				<!-- default_message:blogpost --> 
+					<!-- Title -->
+					<h2><span>Coming Soon</span></h2>
+					<!-- Meta -->
+					<div>
+						<p>Check back in the near future for some exciting and insightful posts...</p>
+					</div>	
+					<!-- owner -->
+					<p>You must first compose and publish a blog post for it to be indexed here. You can create a new post from the Barley menu. Open the Barley menu in the top right corner of the screen and select <i>Page Options</i> ( <i class="barley-icon-file"></i> ) > <i>Create New</i> > <i>Post</i>.</p>
+					<!-- endowner -->
+					<div style="margin-bottom:200px;"></div>
+				<!-- enddefault_message -->
+
+				<div class="pagination">
+					<!-- next --><a href="#" class="older"><img src="/images/right_arrow.svg"></a><!-- endnext -->
+					<!-- previous --><a href="#" class="newer"><img src="/images/right_arrow.svg"></a><!-- endprevious -->
 				</div>
-				<!-- endowner -->
+
 					<!-- Footer -->
 	<div class="hide-for-small">
 		<footer id="footer">
@@ -121,7 +123,7 @@
 			</div>
 
 			<!-- Sub-Navigation -->
-			<!--<div class="large-2 columns right-sidebar">
+			<div class="large-2 columns right-sidebar">
 				<div id="stickersub">
 					<nav class="sub-nav">
 						<ul>
@@ -130,7 +132,7 @@
 						</ul>
 					</nav>
 				</div>	
-			</div>-->
+			</div>
 			
 		</div>
 	</div>

@@ -737,7 +737,7 @@ footer {
 	width: 42%;
 	text-align: right;
 	img {
-		margin: -7px 0 0 3px;
+		margin: -3px 0 0 4px;
 		opacity: 0.7;
 	}
 	a {
@@ -958,7 +958,7 @@ footer {
 	}
 }	
 
-.column:last-child {
+.columns:last-child, .columns .columns:last-child {
 	float: left;
 }
 .item_order { 

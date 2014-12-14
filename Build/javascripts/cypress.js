@@ -46,6 +46,7 @@ $(document).ready(function(){
 	    });
 	}
 
+<<<<<<< HEAD
 
 	if ( $('[id$=_published_on]').length > 0 ) {
 
@@ -62,6 +63,23 @@ $(document).ready(function(){
 		}
 		
 	}
+=======
+	// The function that sorts items
+	(function($){
+		   $.fn.sortChildrenByDataKey = function(key, desc){
+		      var i, els = this.children().sort(function(a, b) {
+		      	return (desc?1:-1)*($(a).data(key) - $(b).data(key));
+		      });
+		      for (i = 0; i < els.length; i++) {
+		          this.prepend($(els[i]).detach());
+		      }
+		      return this;
+		  };
+		})(jQuery);
+
+	// After the page loads, reorder the items based on the data-order attribute
+	$('.homepagegallery').sortChildrenByDataKey('order', false);
+>>>>>>> 0293f71156515c07eed4d8273e5313f548c9e416
 
 	// Loop through the gallery item posts on the home page.
 	// If the titles are too long, truncate them a bit.

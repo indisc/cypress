@@ -1,0 +1,70 @@
+<!-- @include header -->
+<!-- @include sidebar -->
+
+		<!-- Content -->
+		<div class="large-10 columns main-content" id="content">
+			<div class="large-10 columns">
+				<span data-barley="blog_title" style="display:none">Blog Posts</span>
+				
+				<!-- repeat:blogpost:4 -->
+				<article>
+					<!-- Title -->
+					<h2><a href="%URL%" title="Link to %TITLE%">%TITLE%</a></h2>
+					<!-- Meta -->
+					<div class="meta cf">
+						<a href="%URL%" class="published_on publish-date" id="blogpost_%ID%_published_on" data-barley-publish-post="%ID%">%PUBLISHED_ON%</a>
+					</div>
+					<div data-barley="blogpost_excerpt" data-barley-editor="advanced">
+						%EXCERPT%
+					</div>
+					<!-- barleyglyph --><p><a href="%BARLEY_URL%" title="Link to %TITLE%">#</a></p><!-- endbarleyglyph -->	
+					<div class="read-more">
+						<a href="%URL%">Read More...</a>
+					</div>
+				</article>
+				<!-- endrepeat -->
+
+				<!-- default_message:blogpost --> 
+					<!-- Title -->
+					<h2><span>Coming Soon</span></h2>
+					<!-- Meta -->
+					<div>
+						<p>Check back in the near future for some exciting and insightful posts...</p>
+					</div>	
+					<!-- owner -->
+					<p>You must first compose and publish a blog post for it to be indexed here. You can create a new post from the Barley menu. Open the Barley menu in the top right corner of the screen and select <i>Page Options</i> ( <i class="barley-icon-file"></i> ) > <i>Create New</i> > <i>Post</i>.</p>
+					<!-- endowner -->
+					<div style="margin-bottom:200px;"></div>
+				<!-- enddefault_message -->
+
+				<div class="pagination">
+					<!-- next --><a href="#" class="older"><img src="/images/right_arrow.svg"></a><!-- endnext -->
+					<!-- previous --><a href="#" class="newer"><img src="/images/right_arrow.svg"></a><!-- endprevious -->
+				</div>
+
+				<!-- @include footer -->
+			</div>
+
+			<!-- Sub-Navigation -->
+			<div class="large-2 columns right-sidebar">
+				<div id="stickersub">
+					<nav class="sub-nav">
+						<ul>
+							<li><a href="/blog">Newest</a></li>
+							<li><a href="/blog/feed">Subscribe</a></li>	
+						</ul>
+					</nav>
+				</div>	
+			</div>
+			
+		</div>
+	</div>
+	
+<!-- @include scripts -->
+
+	<script>
+		if($('article').length == 0){ $('.scrollup').css('visibility','hidden'); }
+	</script>
+
+</body>
+</html>

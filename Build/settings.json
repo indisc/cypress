@@ -8,5 +8,11 @@
     		"interviews": "Artist Interview",
     		"videos": "Video",
     		"submit": "Submission Form"
-    	}
+    },
+    "feed": [
+        "blog",
+        "interviews",
+        "artspaces",
+        "videos"
+    ]
 }

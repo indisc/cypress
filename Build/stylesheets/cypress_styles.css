@@ -1510,7 +1510,7 @@ footer {
   width: 42%;
   text-align: right; }
   .powered img {
-    margin: -7px 0 0 3px;
+    margin: -3px 0 0 4px;
     opacity: 0.7; }
   .powered a {
     border: none; }
@@ -1692,7 +1692,7 @@ footer {
     font-size: 12px;
     padding: 9px 14px 10px;
     border-radius: 0; } }
-.column:last-child {
+.columns:last-child, .columns .columns:last-child {
   float: left; }
 
 .item_order {
