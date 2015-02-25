@@ -51,11 +51,11 @@
 						<!-- endbarleynav -->
 					</ul>
 					<ul>
-						<li><a href="sponsor.html" title="Sponsor the Gallery">Sponsor</a></li>
+						<li class='current'><a class='current' href="sponsor.html" title="Sponsor the Gallery">Sponsor</a></li>
 					</ul>
 				</nav>
 				<hr>
-				<p><a href="sponsor.html" title="Help support The Watercolor Gallery"><img src="http://placehold.it/160x100&text=Your&nbsp;Ad" alt="Your ad on The Watercolor Gallery"></a><br /><a href="sponsor.html" title="Help support The Watercolor Gallery">Help support the Gallery</a></p>
+				<p><a class='current' href="sponsor.html" title="Help support The Watercolor Gallery"><img src="http://placehold.it/160x100&text=Your&nbsp;Ad" alt="Your ad on The Watercolor Gallery"></a><br /><a class='current' href="sponsor.html" title="Help support The Watercolor Gallery">Help support the Gallery</a></p>
 				<hr>
 				<div data-barley="social_icons" data-barley-editor="advanced">
 				<p id="social-icons">
@@ -69,52 +69,16 @@
 		<!-- Content -->
 		<div class="large-10 columns main-content" id="content">
 			<div class="large-10 columns">
-					<!-- Title -->
-					<h2><span data-barley="submitforms_title" data-barley-editor="mini">Contact Me</span></h2>
-					<!-- Intro -->
-					<div data-barley="submitforms_intro" data-barley-editor="advanced">
-						<p>Use this page to give site visitors a way to reach you. List any sites or networks to which you belong. Let people know how and when you will respond. There are spots for links to the right - you can use these for various accounts you have, or for something else entirely.</p>
-						<p>You can add a contact form below by creating a new one in the Barley menu. Simply open the Barley menu and select <i>Page Options</i> ( <i class="barley-icon-file"></i> ) > <i>Create New</i> > <i>Contact Form</i>.</p> 
-						<p><i>Make sure you specify the email address where your messages will be sent under the form's options ("<i>Edit Options</i>" link).</i></p>
-					</div>
-					<!-- repeat:submit:1 -->
-						<h3>%TITLE% <!-- owner --><span class="owner-settings-link"><a href="%URL%">Edit Options <i class="barley-icon-angle-right"></i></a></span><!-- endowner --></h3>
-						<div id="barley-form">
-							<input type="hidden" name="to" id="to" value="%EMAIL%" />
-				        	<input type="hidden" name="response_success" id="response_success" value="%SUCCESS%" />
-				       		<input type="hidden" name="response_error" id="response_error" value="%ERROR%" />
-				       		<div data-barley="contact_inputs">
-						        <div class="field cf">
-						            <label class="inline">Your Name:</label>
-						            <input type="text" id="name" placeholder="John Doe" data-required="true" />
-						        </div>
-
-						        <div class="field cf">
-						            <label class="inline">Your Email:</label>
-						            <input type="text" id="email" placeholder="john.doe@example.com" data-required="true" />
-						        </div>
-
-						        <div class="field cf">
-						            <label class="inline">Subject:</label>
-						            <input type="text" name="subject" id="to" placeholder="In regards to..." data-required="true" />
-						        </div>
-
-						        <div class="field message cf">
-						            <label class="inline">Message:</label>
-						            <textarea rows="8"></textarea>
-						        </div>
-								
-						        <div class="field cf">
-						            <div class="form-button-box">
-						            	<input type="button" value="Submit" id="barley-submit" class="button" />
-						            </div>
-						        </div>
-						    </div>    
-
-					        <div id="barley-form-message" style="display:none;">MESSAGE HERE</div>
-					    </div>    
-					<!-- endrepeat -->
-
+				<article>
+					<!-- Title of Page -->
+					<h2><span data-barley="sponsor_title" data-barley-editor="mini">Sponsor the Gallery</span></h2>
+					<!-- Post Content -->
+					<div data-barley="sponsor_content" data-barley-editor="advanced">
+						<p>Use this page to tell site visitors about yourself. You can fill this area with text, images or anything you have embed code for (maps, videos, etc.). Use our editor to add headlines, lists, links and more. There are links in a column to the right that can be used for links to social accounts or other sites/pages.</p>
+						<p><img src="images/image_thumb.jpg" class="right" width="200"></p>
+						<p>Images can be aligned to the left or right by using the image editor. Simply bring up the editor by clicking on the image > edit icon ( <i class="barley-icon-edit"></i> ) and type either "left" or "right" in the class field. You can also change the size of an image and the title here as well. An existing image, such as the one to the right, can be replaced or removed. Replacing an image will cause the new image to be cropped to the dimensions of the original. This can come in handy for certain situations. To place an image on the page with different dimensions, simply remove the original and add the new one.</p>
+					</div>	
+				</article>	
 					<!-- Footer -->
 	<div class="hide-for-small">
 		<footer id="footer">
@@ -135,12 +99,9 @@
 			<!-- Sub-Navigation -->
 			<div class="large-2 columns right-sidebar">
 				<div id="stickersub">
-					<nav class="sub-nav" data-barley="submitforms_subnav" data-barley-editor="plus">
+					<nav class="sub-nav" data-barley="sponsor_subnav" data-barley-editor="plus">
 						<ul>
-							<li><a href="skype://">Skype</a></li>
-							<li><a href="mailto:">Email</a></li>
-							<li><a href="http://www.quora.com/">Quora</a></li>
-							<li><a href="im:">Chat</a></li>
+							<li><a href="submit.html">Contact Colin</a></li>
 						</ul>
 					</nav>
 				</div>	

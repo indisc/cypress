@@ -46,8 +46,6 @@ $(document).ready(function(){
 	    });
 	}
 
-<<<<<<< HEAD
-
 	if ( $('[id$=_published_on]').length > 0 ) {
 
 		var publishedOn =               new Date( $('[id$=_published_on]').html() );
@@ -63,7 +61,7 @@ $(document).ready(function(){
 		}
 		
 	}
-=======
+
 	// The function that sorts items
 	(function($){
 		   $.fn.sortChildrenByDataKey = function(key, desc){
@@ -79,7 +77,6 @@ $(document).ready(function(){
 
 	// After the page loads, reorder the items based on the data-order attribute
 	$('.homepagegallery').sortChildrenByDataKey('order', false);
->>>>>>> 0293f71156515c07eed4d8273e5313f548c9e416
 
 	// Loop through the gallery item posts on the home page.
 	// If the titles are too long, truncate them a bit.
