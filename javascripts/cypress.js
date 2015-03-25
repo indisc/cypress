@@ -34,7 +34,7 @@ $(document).ready(function(){
 	});
 
 	var div = $(".main-content").height();
-    var doc = $(window).height();
+  var doc = $(window).height();
 
     if (div > doc ) {
         $(".main-content").addClass('tall');
@@ -46,7 +46,7 @@ $(document).ready(function(){
 	    });
 	}
 
-	if ( $('[id$=_published_on]').length > 0 ) {
+	/*if ( $('[id$=_published_on]').length > 0 ) {
 
 		var publishedOn =               new Date( $('[id$=_published_on]').html() );
 
@@ -59,11 +59,11 @@ $(document).ready(function(){
 		} else {
 			console.log('It has only been '+daysSincePublished+' days since this post was published so we are not going to show a Google Ad.');
 		}
-		
-	}
+
+	} */
 
 	// The function that sorts items
-	(function($){
+	/*(function($){
 		   $.fn.sortChildrenByDataKey = function(key, desc){
 		      var i, els = this.children().sort(function(a, b) {
 		      	return (desc?1:-1)*($(a).data(key) - $(b).data(key));
@@ -73,16 +73,16 @@ $(document).ready(function(){
 		      }
 		      return this;
 		  };
-		})(jQuery);
+		})(jQuery); */
 
 	// After the page loads, reorder the items based on the data-order attribute
-	$('.homepagegallery').sortChildrenByDataKey('order', false);
+	//$('.homepagegallery').sortChildrenByDataKey('order', false);
 
 	// Loop through the gallery item posts on the home page.
 	// If the titles are too long, truncate them a bit.
-	$('.homepagegallery .item-title a span').each(function(e){
-		if ($(this).text().length > 28) {
-			$(this).text($(this).text().substr(0,28) + '...');
+	$('.topgallery .item-title a span').each(function(e){
+		if ($(this).text().length > 40) {
+			$(this).text($(this).text().substr(0,40) + '...');
 		}
 	});
 

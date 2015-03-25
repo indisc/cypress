@@ -9,7 +9,7 @@
 	<script src="/javascripts/jquery.jpanelmenu.min.js"></script>
 	<script src="/javascripts/cypress.js"></script>
 
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		(function($){
 		   $.fn.sortChildrenByDataKey = function(key, desc){
 		      var i, els = this.children().sort(function(a, b) {
@@ -30,20 +30,20 @@
 
 		});
 
-	</script>
+	</script> -->
 	<!-- owner -->
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		$(document).ready(function(){
 
 			$(function() {
     			$( ".topgallery" ).sortable({
-    				items: "> .item", 
+    				items: "> .item",
     				stop: function() { // When drag is complete, do all of the following
     					draggable_items = $('.topgallery').children(); // Get all items within the sortable wrapper(s)
     					var item_id;
-  
+
     					for (icarus = 0; icarus < draggable_items.length; icarus++) {
-    						
+
     						item_id = $(draggable_items[icarus]).attr('data-item-id'); // The numeric Barley ID for this item.
 
     						$(draggable_items[icarus]).attr('data-order',icarus); // Update data-order attribute for item dragged
@@ -51,7 +51,7 @@
     						$('#item_order_'+item_id).addClass('isModified').text(icarus); // Update data-barley order number for this item, add isModified class
 
     						barley.client.execute($('#item_order_'+item_id)); // Force Barley to save this key without needing to "type" with the keyboard.
-    						
+
     					}
     				}
     			});
@@ -61,13 +61,13 @@
 
 			$(function() {
 				$( ".bottomgallery" ).sortable({
-    				items: "> .item", 
+    				items: "> .item",
     				stop: function() { // When drag is complete, do all of the following
     					draggable_items = $('.bottomgallery').children(); // Get all items within the sortable wrapper(s)
     					var item_id;
-  
+
     					for (icarus = 0; icarus < draggable_items.length; icarus++) {
-    						
+
     						item_id = $(draggable_items[icarus]).attr('data-item-id'); // The numeric Barley ID for this item.
 
     						$(draggable_items[icarus]).attr('data-order',icarus); // Update data-order attribute for item dragged
@@ -82,5 +82,5 @@
 	    		$( ".bottomgallery" ).disableSelection();
 			});
 		});
-	</script>
+	</script> -->
 	<!-- endowner -->

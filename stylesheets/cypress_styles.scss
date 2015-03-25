@@ -35,6 +35,9 @@ $secondary: #999;
 
 @import "_foundation_grid.scss";
 
+.row { max-width: 1140px; }
+.gallery .item div img { max-width: 100%; }
+
 
 // Declarations
 
@@ -79,7 +82,7 @@ h4 {
 	font-size: 32px;
 	margin: 34px 0 26px;
 	padding-bottom: 0;
-}	
+}
 article {
 	h2 {
 		text-transform: none;
@@ -93,7 +96,7 @@ article {
 		font-size: 13px;
 		margin: 30px 0 60px;
 	}
-}	
+}
 p {
 	font-size: 13px;
 }
@@ -103,19 +106,19 @@ p {
 	margin: 0 0;
 }
 #background {
-	position: fixed; 
-	top: -50%; 
-	left: -50%; 
-	width: 200%; 
+	position: fixed;
+	top: -50%;
+	left: -50%;
+	width: 200%;
 	height: 200%;
 	z-index: -1;
 	img {
-	  position: absolute; 
-	  top: 0; 
-	  left: 0; 
-	  right: 0; 
-	  bottom: 0; 
-	  margin: auto; 
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  margin: auto;
 	  min-width: 50%;
 	  min-height: 50%;
 	}
@@ -274,7 +277,7 @@ p {
 		list-style: none inside;
 		padding: 0 0 0 16px;
 		margin: 28px 0 34px;
-		li { 
+		li {
 			background-image: url(../images/right_arrow.svg);
 			background-position: 0 -1px;
 			background-size: 8px 16px;
@@ -288,7 +291,7 @@ p {
 		list-style: decimal;
 		padding: 0 0 0 18px;
 		margin: 28px 0 34px 16px;
-		li { 
+		li {
 			font-size: 13px;
 			margin: 12px 0;
 			padding-left: 4px;
@@ -320,7 +323,7 @@ p {
 		height: 56px;
 		padding: 11px 10px;
 		background: rgba(0,0,0,0.7);
-		color: white;			
+		color: white;
 		margin: -56px 0 0;
 		position: relative;
 		width: 100%;
@@ -350,7 +353,7 @@ p {
 			@include long-fade;
 			a {
 				display: block;
-			}	
+			}
 		}
 		img {
 			opacity: 0.7;
@@ -373,7 +376,7 @@ p {
 			@include long-fade;
 			a {
 				display: block;
-			}	
+			}
 		}
 		img {
 			opacity: 0.7;
@@ -458,7 +461,7 @@ footer {
 			}
 		}
 	}
-}	
+}
 .is-sticky .sub-nav {
 	margin-top: 0;
 }
@@ -470,6 +473,8 @@ footer {
 		text-decoration: none;
 		border: none;
 		margin-top: 4px;
+		font-size: 14px;
+		color: rgba(0, 0, 0, 0.3);
 		img {
 			max-width: 14px;
 			padding: 0 2px;
@@ -561,7 +566,7 @@ footer {
 	font-size: 13px;
 	padding: 12px 20px;
 	margin-top: 34px;
-}	
+}
 .menu-trigger {
 	position: absolute;
 	top: 15px;
@@ -580,7 +585,7 @@ footer {
 	    background-size: 100%;
 	    background-position: center top;
 	    background-repeat: no-repeat;
-	}   
+	}
 	&.mobile {
 		margin: 0 15px 20px;
 		min-height: 260px;
@@ -797,7 +802,9 @@ footer {
 			padding: 10px 4px 11px;
 			font-size: 13px;
 			margin-top: 34px;
-
+			a {
+				color: $primary;
+			}
 		}
 	}
 	.main-content {
@@ -805,11 +812,11 @@ footer {
 			max-width: 100%;
 			margin: 26px auto 30px;
 			display: block;
-			&.right { 
+			&.right {
 				float: none !important;
 				margin: 26px auto 30px;
 			}
-			&.left { 
+			&.left {
 				float: none !important;
 				margin: 26px auto 30px;
 			}
@@ -881,7 +888,7 @@ footer {
 				}
 			}
 		}
-	}	
+	}
 	h1, h2, h3, h4 {
 		text-align: center;
 	}
@@ -898,7 +905,7 @@ footer {
 		img {
 			margin: 0;
 			display: inline;
-		}	
+		}
 	}
 	.gallery-default {
 		min-height: none;
@@ -945,8 +952,8 @@ footer {
 			float: none;
 			font-size: 13px;
 			padding: 10px;
-			margin-top: 10px;	
-			border-radius: 0;	
+			margin-top: 10px;
+			border-radius: 0;
 		}
 	    input[type="button"] {
 			width: 100%;
@@ -956,11 +963,14 @@ footer {
 			border-radius: 0;
 		}
 	}
-}	
+}
 
 .columns:last-child, .columns .columns:last-child {
 	float: left;
 }
-.item_order { 
+.item_order {
 	display: none;
 }
+.homepage-sidebar h5 { margin-top: 3px; margin-bottom: 3px; }
+.homepage-sidebar h5 a { text-decoration: none; line-height: 1.5; border: none; font-weight: lighter; }
+.homepage-sidebar .item { border-bottom: 1px dotted rgba(179, 179, 179, 0.66); }

@@ -30,25 +30,23 @@
 		<div class="large-2 columns side">
 			<div id="sticker">
 				<div data-barley="site_logo" data-barley-editor="image-logo">
-					<a href="/"><img src="/images/cypress_logo.svg" class="logo" id="logo"></a>
+					<a href="/" title="The Watercolor Gallery"><img src="/images/cypress_logo.svg" class="logo" id="logo"></a>
 				</div>
 				<hr>
 				<div id="intro">
 					<p><strong>The Watercolor Gallery</strong></p>
-					<p>A gallery of inspirational watercolor paintings from artists all over the world curated by <a href="http://colin.getbarley.com/">Colin Devroe</a>.</p>
+					<p>A gallery of inspirational watercolor paintings from artists all over the world curated by <a href="http://cdevroe.com/" title="The curator's web site">Colin Devroe</a>.</p>
 				</div>
 				<hr>
 				<nav id="menu">
-					<ul data-barley-navigation="left">
-						<!-- barleynav -->
-						<li><a href="index.html">Home</a></li>
-						<li><a href="/gallery.html">Gallery</a></li>
-						<li><a href="/interviews.html">Interviews</a></li>
-						<li><a href="/artspaces.html">Art Spaces</a></li>
-						<li><a href="/videos.html">Videos</a></li>
-						<li><a href="/about.html">About</a></li>
-						<li><a href="/submit.html">Submit</a></li>
-						<!-- endbarleynav -->
+					<ul>
+						<li><a href="index.html" title="The Watercolor Gallery">Home</a></li>
+						<li><a href="/gallery.html" title="Browse paintings in the Gallery">Gallery</a></li>
+						<li><a href="/interviews.html" title="Read Interviews">Interviews</a></li>
+						<li><a href="/artspaces.html" title="See where artists work">Art Spaces</a></li>
+						<li><a href="/videos.html" title="Watch video tutorials">Videos</a></li>
+						<li><a href="/about.html" title="About The Watercolor Gallery">About</a></li>
+						<li><a href="/submit.html" title="Submit your work">Submit Your Work</a></li>
 					</ul>
 					<ul>
 						<li><a href="sponsor.html" title="Sponsor the Gallery">Sponsor</a></li>
@@ -57,27 +55,29 @@
 				<hr>
 				<p><a href="sponsor.html" title="Help support The Watercolor Gallery"><img src="http://placehold.it/160x100&text=Your&nbsp;Ad" alt="Your ad on The Watercolor Gallery"></a><br /><a href="sponsor.html" title="Help support The Watercolor Gallery">Help support the Gallery</a></p>
 				<hr>
-				<div data-barley="social_icons" data-barley-editor="advanced">
+				<div>
 				<p id="social-icons">
-					<a href="http://twitter.com/h2ocolor"><img src="/images/social_icons/twitter.svg" class="icon"></a>
-					<a href="http://facebook.com/h2ocolor"><img src="/images/social_icons/facebook.svg" class="icon"></a>
+					<a href="http://twitter.com/h2ocolor" title="Follow @h2ocolor on Twitter"><img src="/images/social_icons/twitter.svg" class="icon"></a>
+					<a href="http://facebook.com/h2ocolor" title="Like The Watercolor Gallery on Facebook"><img src="/images/social_icons/facebook.svg" class="icon"></a>
 				</p>
-				</div>	
+				</div>
 			</div>
 		</div>
 
-		<div class="large-10 columns main-content cf">
-		<h2 data-barley="pagesnippet_gallery_title" data-barley-editor="mini">Gallery</h2>
-		<div data-barley="pagesnippet_gallery_description" data-barley-editor="advanced">
-			<p>A hand-curated collection of watercolors from artists all over the world. If you'd like to see your art here, please submit it!</p>
-		</div>
+
+		<div class="large-10 gallery columns main-content cf">
+			<h2 data-barley="pagesnippet_gallery_title" data-barley-editor="mini">Gallery</h2>
+			<div class="hide-for-small" data-barley="pagesnippet_gallery_description" data-barley-editor="advanced">
+				<p>A hand-curated collection of watercolors from artists all over the world. If you'd like to see your art here, please submit it!</p>
+			</div>
+
 			<!-- repeat:blogpost:24 -->
-				<div class="large-4 columns item">
+				<div class="large-3 small-6 columns item">
 					<a href="%URL%">
 						<div>
 							%THUMB%
 						</div>
-					</a>	
+					</a>
 					<h5 class="item-title"><a href="%URL%"><span>%TITLE%</span></a></h5>
 				</div>
 			<!-- endrepeat -->
@@ -86,24 +86,25 @@
 			<div class="large-12 columns">
 				<div class="pagination">
 					<!-- next --><a href="#" class="older">Next <img src="/images/right_arrow.svg"></a><!-- endnext -->
-					<!-- previous --><a href="#" class="newer">Previous <img src="/images/right_arrow.svg"></a><!-- endprevious -->
+					<!-- previous --><a href="#" class="newer"><img src="/images/right_arrow.svg"> Previous</a><!-- endprevious -->
 				</div>
 					<!-- Footer -->
 	<div class="hide-for-small">
 		<footer id="footer">
 			<a class="scrollup"><img src="/images/top_arrow.svg"></a>
 			<div class="bottom-line">
-				<div class="copyright" data-barley="copyright" data-barley-editor="simple">
-					&copy; Cypress
+				<div class="copyright">
+					&copy; Colin Devroe - The Watercolor Gallery
 				</div>
 				<div class="powered">
-					<span data-barley="barley_icon" data-barley-editor="image"><a href="http://getbarley.com"><img src="images/barley_icon.svg" width="18"></a></span><span class="hide-for-small" data-barley="powered" data-barley-editor="mini">powered by</span>
-				</div>	
+					<a href="http://getbarley.com"><img src="images/barley_icon.svg" alt="A Barley Website" width="18"></a><span class="hide-for-small"><a href="http://getbarley.com">A Barley Website</a></span>
+				</div>
 				<div class="cf"></div>
 			</div>
 		</footer>
 	</div>
-			</div>	
+
+			</div>
 		</div>
 	</div>
 
@@ -118,7 +119,7 @@
 	<script src="/javascripts/jquery.jpanelmenu.min.js"></script>
 	<script src="/javascripts/cypress.js"></script>
 
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		(function($){
 		   $.fn.sortChildrenByDataKey = function(key, desc){
 		      var i, els = this.children().sort(function(a, b) {
@@ -139,20 +140,20 @@
 
 		});
 
-	</script>
+	</script> -->
 	<!-- owner -->
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		$(document).ready(function(){
 
 			$(function() {
     			$( ".topgallery" ).sortable({
-    				items: "> .item", 
+    				items: "> .item",
     				stop: function() { // When drag is complete, do all of the following
     					draggable_items = $('.topgallery').children(); // Get all items within the sortable wrapper(s)
     					var item_id;
-  
+
     					for (icarus = 0; icarus < draggable_items.length; icarus++) {
-    						
+
     						item_id = $(draggable_items[icarus]).attr('data-item-id'); // The numeric Barley ID for this item.
 
     						$(draggable_items[icarus]).attr('data-order',icarus); // Update data-order attribute for item dragged
@@ -160,7 +161,7 @@
     						$('#item_order_'+item_id).addClass('isModified').text(icarus); // Update data-barley order number for this item, add isModified class
 
     						barley.client.execute($('#item_order_'+item_id)); // Force Barley to save this key without needing to "type" with the keyboard.
-    						
+
     					}
     				}
     			});
@@ -170,13 +171,13 @@
 
 			$(function() {
 				$( ".bottomgallery" ).sortable({
-    				items: "> .item", 
+    				items: "> .item",
     				stop: function() { // When drag is complete, do all of the following
     					draggable_items = $('.bottomgallery').children(); // Get all items within the sortable wrapper(s)
     					var item_id;
-  
+
     					for (icarus = 0; icarus < draggable_items.length; icarus++) {
-    						
+
     						item_id = $(draggable_items[icarus]).attr('data-item-id'); // The numeric Barley ID for this item.
 
     						$(draggable_items[icarus]).attr('data-order',icarus); // Update data-order attribute for item dragged
@@ -191,8 +192,9 @@
 	    		$( ".bottomgallery" ).disableSelection();
 			});
 		});
-	</script>
+	</script> -->
 	<!-- endowner -->
+
 
 	<script>
 		if($('.item').length == 0){ $('.scrollup').css('visibility','hidden'); }
